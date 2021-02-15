@@ -1,0 +1,70 @@
+.resume-body{
+	max-width: 500px;
+	margin: 45px auto;
+	color: #FFAA81;
+	padding: 0 16px;
+}
+
+.resume-body h1{
+	font-size: 60px;
+	margin-bottom: 40px;
+	font-weight: 400;
+}
+.resume-body img{
+	height: 210px;
+	width: 210px;
+	border-radius: 105px;
+	margin-bottom: 40px;
+}
+.resume-body p{
+	font-size: 18px;
+	line-height: 2;
+	font-weight: 300;
+}
+.btn-resume{
+	background: #FFAA81;
+	padding: 6px 16px;
+	color: #ffffff;
+	display: inline-block;
+	cursor: pointer;
+	margin-top: 24px;
+}
+
+@media screen and (max-width: 1024px) {
+	.resume-body h1{
+		font-size: 45px;
+		margin-bottom: 32px;
+	}
+	.resume-body img{
+		height: 160px;
+		width: 160px;
+		border-radius: 80px;
+		margin-bottom: 32px;
+	}
+	.resume-body p{
+		font-size: 16px;
+	}
+	.btn-resume{
+	background: #FFAA81;
+	padding: 12px 24px;
+	color: #ffffff;
+	display: inline-block;
+	cursor: pointer;
+	margin-top: 24px;
+}
+}
+@media screen and (max-width: 768px) {
+	.resume-body h1{
+		font-size: 30px;
+		margin-bottom: 24px;
+	}
+	.resume-body img{
+		height: 120px;
+		width: 120px;
+		border-radius: 60px;
+		margin-bottom: 24px;
+	}
+	.resume-body p{
+		font-size: 14px;
+	}
+}
