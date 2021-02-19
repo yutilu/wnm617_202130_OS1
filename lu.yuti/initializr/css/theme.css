@@ -1,0 +1,174 @@
+html {
+	width: 100%;
+}
+
+body {
+	margin: 0;
+	background: #F1F0F0;
+	font-family: roboto, 'work sans', sans-serif;
+	font-weight: 300;
+}
+
+.header-container header{
+	box-sizing: border-box;
+	padding: 0 80px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.title {
+	float: left;
+	color: #7266F1;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 70px;
+}
+
+nav a {
+	color: #7B8CE9;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+
+.main-container {
+	width: calc(100% - 32px);
+	margin: 0 auto;
+	max-width: 1024px;
+}
+
+.main-container .main {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.main-container .main article {
+
+}
+
+.main-container .main aside {
+	width: 100%;
+	text-align: center;
+	
+}
+
+.main-container .main aside::before {
+	display: table;
+	content: '';
+	height: 300px;
+	width: 100%;
+	background-image: url('https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.main-container .main aside h3 {
+	text-transform: uppercase;
+	font-size: 32px;
+	color: #A1C3ED;
+}
+
+
+.main-container .main article header{
+	box-sizing: border-box;
+	padding: 24px;
+	border: 1px solid #A1C3ED;
+	margin: 32px 16px;
+	width: calc(100% - 32px);
+	border-radius: 10px;
+}
+
+.main-container .main article header h1 {
+	font-size: 24px;
+	color: #A1C3ED;
+	font-weight: bold;
+	line-height: 1.1;
+	text-align: center;
+
+}
+
+section {
+	width: 50%;
+	float: left;
+	padding: 16px;
+	box-sizing: border-box;
+}
+
+section h2 {
+	font-size: 24px;
+	color: #A1C3ED;
+	font-weight: bold;
+	line-height: 1.1;
+}
+
+footer h3{
+	font-size: 24px;
+	color: #A1C3ED;
+	font-weight: bold;
+	line-height: 1.1;
+}
+
+footer{
+	width: calc(100% - 32px);
+	margin: 0 16px;
+}
+
+footer h1 {
+	font-size: 24px;
+	color: #A1C3ED;
+	font-weight: bold;
+	line-height: 1.1;
+}
+
+.footer-container {
+	height: 60px;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	background-color: #7B8CE9;
+  	color: #F1F0F0;
+  	text-align: center;
+  	width: 100%;
+  	margin-top: 60px;
+}
+
+@media screen and (max-width: 768px) {
+	.header-container{
+		padding: 0;
+	}
+	.header-container header{
+		padding: 0 16px;
+	}
+	.title{
+		font-size: 18px;
+	}
+	nav li {
+		font-size: 14px;
+		margin-left: 4px;
+	}
+	header, section, footer{
+		text-align: center;
+	}
+	section {
+		width: 100%;
+	}
+}
+
+
+
