@@ -1,0 +1,382 @@
+/* CSS RESET */
+
+*, *::after, *::before {
+   box-sizing:border-box;
+}
+
+:root {
+   --font-sans:Helvetica, Arial, sans-serif;
+   --font-serif:Cambria, Georgia, serif;
+
+
+   --color-neutral-light:#fff9f1;
+   --color-neutral-medium:#fdf8eb;
+   --color-neutral-dark:#262220;
+
+   --color-main-light:#d56146;
+   --color-main-medium:#c66647;
+   --color-main-dark:#ab7766;
+
+   --color-white:#fdfdfd;
+   --color-black:#0e0d0c;
+
+   --header-height:50px;
+}
+
+body {
+   margin:0;
+   font-size:100%;
+   font-family:var(--font-sans);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-family:var(--font-sans);
+}
+
+a {
+   color:inherit;
+   text-decoration:none;
+   font-weight:bold;
+}
+a:hover {
+   text-decoration: underline;
+}
+
+
+
+
+
+/* Layout Classes */
+.hidden { display:none; }
+
+.display-flex { display:flex; }
+.display-block { display:block; }
+.display-inline-flex { display:inline-flex; }
+.display-inline-block { display:inline-block; }
+
+.flex-stretch { flex:1 1 auto; }
+.flex-none { flex:none; }
+
+.flex-align-center { align-items:center; }
+.flex-justify-center { justify-content:center; }
+.flex-vertical { flex-direction:column; }
+
+
+
+
+
+
+/* PAGE ELEMENTS */
+[data-role="page"].ui-page-active {
+   display:flex;
+   flex-direction:column;
+   padding: 0 16px;
+}
+[data-role="main"] {
+   flex: 1 1 100%;
+}
+.footer{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   height: var(--header-height);
+   width: 100%;
+   line-height: var(--header-height);
+   border-width:0;
+   background-color: var(--color-white);
+   box-shadow:0 0 5px rgba(0,0,0,0.2);
+   position:fixed;
+   bottom:0;
+   left:0;
+   overflow:hidden;
+}
+.footer a{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 33.33%;
+   height: 100%
+}
+.footer a img{
+   width: 24px; height: 24px;
+
+}
+
+.ui-header .ui-title {
+   position:absolute;
+   top:0;
+   left:0;
+   width:100%;
+   height:100%;
+   text-align:center;
+   margin:0;
+   font-size:1rem;
+   padding:0;
+}
+
+
+
+
+
+
+
+/* FORM ELEMENTS */
+.form-control {
+    margin: 1em 0;
+}
+.ui-mobile .form-label {
+    margin: 1em 0;
+    font-size: 0.7em;
+    color: var(--color-neutral-dark);
+}
+.form-input {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid var(--color-neutral-dark);
+    margin: 0;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    outline: 0;
+    font:inherit;
+}
+.form-button {
+    margin: 0;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    border-width:0;
+    background-color: var(--color-main-light);
+    outline: 0;
+    width: 100%;
+    display: inline-block;
+    font:inherit;
+    text-align:center;
+    cursor:pointer;
+}
+.form-button:hover {
+   text-decoration:none;
+   background-color:var(--color-black);
+}
+
+/*SIGNIN PAGE*/
+#signin-page .logo{
+   height: 200px;
+   background-color: #FFF9F1;
+   margin: 0 -16px;
+   clip-path: ellipse(600px 150px at 500px 50px);
+
+}
+#signin-page .logo img{
+   width: 55px;
+   margin-top: 16px;
+   margin-left: 16px;
+}
+#signin-page .page-content{
+   padding: 0 16px;
+}
+#signin-page .hello h1{
+   font-size: 32px;
+   margin: 32px 0 40px 0;
+}
+#signin-page .form-control{
+   margin: 0;
+   position: relative;
+}
+#signin-page .form-control .form-input{
+   border: 0;
+   border-bottom: 1px solid #424242;
+   border-radius: 0;
+   height: 30px;
+   padding: 0 0 0 40px;
+   margin-bottom: 40px;
+   font-size: 14px;
+}
+#signin-page .form-control .form-input::placeholder{
+   color: #9f9f9f;
+}
+.prefix{
+   width: 24px;
+   height: 24px;
+}
+#signin-page .form-control .prefix{
+   position: absolute;
+   left: 0;
+   top: 3px;
+}
+#signin-page .sign-in-button{
+   color: var(--color-white);
+   border-radius: 10px;
+   width: 120px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 700;
+   background: var(--color-main-light);
+   margin: auto;
+   margin-bottom: 65px;
+}
+#signin-page .register{
+   text-align: center;
+   margin-bottom: 24px;
+}
+#signin-page .register span{
+   color: var(--color-main-light);
+}
+
+
+/*LIST PAGE*/
+#list-page .title{
+   text-align: center;
+   margin-top: 32px;
+   margin-bottom: 32px;
+   font-size: 24px;
+}
+#list-page .animal-list{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin-bottom: 60px;
+}
+#list-page .single-animal{
+   flex-basis: calc(50% - 12PX);
+   height: 150px;
+   border-radius: 10px;
+   background: #ececec;
+   margin-bottom: 24px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#list-page .single-animal img{
+   width: 60px; height: 60px;
+}
+
+
+/*USER PROFILE PAGE*/
+#user-profile-page .photo{
+  margin-top: 32px;
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  background-color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px auto 12px auto;
+}
+
+#user-profile-page .user-name{
+   font-size: 16px;
+   font-weight: 700;
+   margin-bottom: 4px;
+   text-align: center;
+}
+#user-profile-page .user-email{
+   font-size: 14px;
+   font-weight: 300;
+   margin-bottom: 36px;
+   text-align: center;
+}
+#user-profile-page .my-animal-title{
+   font-size: 24px;
+   font-weight: 700;
+   margin-bottom: 24px;
+   text-align: center;
+}
+#user-profile-page .my-animal{
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+   margin-bottom: 30px;
+}
+#user-profile-page .my-animal .single-image{
+   flex-basis: calc(50% - 12PX);
+   height: 150px;
+   border-radius: 10px;
+   background: #ececec;
+   margin-bottom: 24px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+#user-profile-page .btn-logout{
+   color: var(--color-white);
+   border-radius: 10px;
+   width: 120px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 700;
+   background: var(--color-main-light);
+   margin: auto;
+   margin-bottom: 65px;
+}
+
+/*ANIMAL PROFILE PAGE*/
+#animal-profile-page .page-head{
+   height: 240px;
+   border-radius: 0 0 10px 10px;
+   background: #ececec;
+   margin: 0 -16px;
+}
+#animal-profile-page .btn-goback img{
+   width: 24px; height: 24px;
+   margin: 16px 0 0 16px;
+}
+
+#animal-profile-page .btn-delete{
+   width: 24px; height: 24px;
+   margin: 24px 0;
+   display: flex;
+   justify-content: flex-end;
+   width: 100%;
+}
+#animal-profile-page .input-block{
+   margin-bottom: 32px;
+}
+#animal-profile-page .input-block .ui-input-text{
+   border: 0;
+}
+#animal-profile-page .input-block label{
+   font-size: 18px;
+   font-weight: 700;
+   margin-bottom: 16px;
+}
+
+#animal-profile-page .input-block input{
+   border: 0;
+   border-bottom: 1px solid #424242;
+}
+#animal-profile-page .input-block input::placeholder{
+   color: #9f9f9f;
+}
+#animal-profile-page .btn-save{
+   color: var(--color-white);
+   border-radius: 10px;
+   width: 120px;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-weight: 700;
+   background: var(--color-main-light);
+   margin: auto;
+   margin-bottom: 65px;
+}
+
+
+
+
+
+
+
+
+
+
+
