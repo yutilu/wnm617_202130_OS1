@@ -11,163 +11,202 @@
 	<link rel="stylesheet" href="css/app.css">
 
 	<script src="lib/js/jquery-2.2.4.min.js"></script>
-	<script type="js/app.js"></script>
+  <script src="js/signin.js"></script>
+	<script src="js/app.js"></script>
 	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
 
-	 <section data-role="page" id="signin-page">
-      <div data-role="main" class="display-flex flex-vertical">
-      	<div class="logo">
-      		<img src="img/fox_logo.png" alt="logo">
-      	</div>
-         
-         <div class="page-content">
-         	<div class="hello">
-         		<h1>Hello,<br/>Login now.</h1>
-         	</div>
 
-            <form class="form" id="signin-form" data-ajax="false">
-               <div class="form-control">
-               		<img class="prefix" src="img/msg.png" alt="">
-                  	<input class="form-input" type="text" id="signin-username" data-role="none" placeholder="Email">
-               </div>
-               <div class="form-control">
-               		<img class="prefix" src="img/pw.png" alt="">
-                  	<input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
-               </div>
-              	<a href="#recent-page">
-              		<div class="sign-in-button">Log in</div>
-              	</a>
-            </form>
-
-            <div class="register">
-            	Don't have an account? <span>Sign Up</span>
-            </div>
-
-         </div>
-      </div>
-   </section>
-
-
-   <section data-role="page" id="recent-page">
-      <div data-role="main">
-         MAP!
-      </div>
-      <footer class="footer">
-         <a href="#recent-page"><!-- map -->
-         	<img src="img/map.png" alt="map">
-         </a>
-         <a href="#list-page"><!-- list -->
-         	<img src="img/list1.png" alt="list">
-         </a>
-         <a href="#user-profile-page"><!-- profile -->
-         	<img src="img/user.png" alt="user">
-         </a>
-      </footer>
-   </section>
-
-   <section data-role="page" id="list-page">
-     	<h1 class="title">My Traking</h1>
-     	<div data-role="main">
-         <!-- ul>li*10>a[href=#animal-profile-page]>{Animal $} -->
-         	<div class="animal-list">
-	         	<a href="#animal-profile-page" class="single-animal">
-	         		<div>Animal 1</div>
-	         	</a>
-	         	<a href="#animal-profile-page" class="single-animal">
-	         		<div>Animal 1</div>
-	         	</a>
-	         	<a href="#animal-profile-page" class="single-animal">
-	         		<div>Animal 1</div>
-	         	</a>
-	         	<a href="#animal-profile-page" class="single-animal">
-	         		<div>Animal 1</div>
-	         	</a>
-	         	<a href="#animal-profile-page" class="single-animal">
-	         		<div><img src="img/add.png" alt=""></div>
-	         	</a>
-        	</div>
-     	</div>
-      	<footer class="footer">
-	        <a href="#recent-page"><!-- map -->
-	         	<img src="img/map.png" alt="map">
-	        </a>
-	        <a href="#list-page"><!-- list -->
-	         	<img src="img/list1.png" alt="list">
-	        </a>
-	        <a href="#user-profile-page"><!-- profile -->
-	         	<img src="img/user.png" alt="user">
-	        </a>
-     	</footer>
+	<section data-role="page" id="signin-page">
+	   <div data-role="main" class="display-flex flex-vertical">
+		  <div class="flex-none">
+			<div class="logo">
+				<img src="img/fox_logo.png" alt="logo">
+			</div>
+			<div class="hello">
+				<h1>Hello,<br/>Login now.</h1>
+			</div>
+				<form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+					<div class="form-control">
+						<img class="prefix" src="img/msg.png" alt="">
+						<input class="form-input" type="text" id="signin-username" data-role="none"  placeholder="Email">
+					</div>
+					<div class="form-control">
+						<img class="prefix" src="img/pw.png" alt="">
+						<input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
+					</div>
+					<div class="form-control">
+						<input type="submit" class="form-button sign-in-button" value="Login" data-role="none">
+					</div>
+				</form>
+				<div class="register">
+					Don't have an account? <span><a href='#signup-page'>Sign up</a></span>
+				</div>
+		  </div>
+	   </div>
 	</section>
 
 
-   <section data-role="page" id="user-profile-page">
-		<div class="photo">img</div>   	
-		<div class="user-name">User name</div>
-		<div class="user-email">email.example@gmail.com</div>
-
-		<div class="my-animal-title">My Fox</div>
-		<div class="my-animal">
-			<div class="single-image">img</div>
-			<div class="single-image">img</div>
-			<div class="single-image">img</div>
-			<div class="single-image">img</div>
+	<section data-role="page" id="signup-page">
+		<div data-role="main" class="display-flex flex-vertical">
+		   <div class="flex-none">
+			 <div class="logo">
+				 <img src="img/fox_logo.png" alt="logo">
+			 </div>
+			 <div class="hello">
+				 <h1>Sign up</h1>
+			 </div>
+				 <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+					<div class="form-control">
+						<img class="prefix" src="img/msg.png" alt="">
+						<input class="form-input" type="text" id="signin-username" data-role="none"  placeholder="Please enter your email">
+					</div>
+					<div class="form-control">
+						<img class="prefix" src="img/pw.png" alt="">
+						<input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Please enter a password">
+					</div>
+					<div class="form-control">
+						<a href='#signin-page' class="form-button sign-in-button"data-role="none">Sign up</a>
+					</div>
+				 </form>
+				 <div class="register">
+					 Already have an account? <span><a href='#signin-page'>Login</a></span>
+				 </div>
+		   </div>
 		</div>
-
-		<a href="#signin-page"><div class="btn-logout">Log out</div></a>
-    
-      <footer class="footer">
-         <a href="#recent-page"><!-- map -->
-         	<img src="img/map.png" alt="map">
-         </a>
-         <a href="#list-page"><!-- list -->
-         	<img src="img/list1.png" alt="list">
-         </a>
-         <a href="#user-profile-page"><!-- profile -->
-         	<img src="img/user.png" alt="user">
-         </a>
-      </footer>
-   </section>
-
-
-   <section data-role="page" id="animal-profile-page">
-    	<div class="page-head">
-    		<a href="#list-page"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
-    	</div>
-    	<div class="page-content">
-    		<div class="btn-delete"><img src="img/delete.png" alt=""></div>
-    		<div class="input-block">
-	    		<label for="">Name</label>
-	    		<input type="text" placeholder='Name'>
-    		</div>
-	    	<div class="input-block">
-	    		<label for="">Varieties</label>
-	    		<input type="text" placeholder='Varieties'>
-	    	</div>
-	    	<div class="input-block">
-	    		<label for="">Color</label>
-	    		<input type="text" placeholder='Color'>
-	    	</div>
-	    	<div class="input-block">
-	    		<label for="">Location</label>
-	    		<input type="text" placeholder='Location'>
-	    	</div>
-	    	<a href="#list-page"><div class="btn-save">Save</div></a>
-    	</div>
-    	 <footer class="footer">
-	         <a href="#recent-page"><!-- map -->
-	         	<img src="img/map.png" alt="map">
-	         </a>
-	         <a href="#list-page"><!-- list -->
-	         	<img src="img/list1.png" alt="list">
-	         </a>
-	         <a href="#user-profile-page"><!-- profile -->
-	         	<img src="img/user.png" alt="user">
-	         </a>
-      </footer>
-   </section>
-
-</body>
+	 </section>
+ 
+ 
+	<section data-role="page" id="recent-page">
+	   <div data-role="main"></div>
+	   <footer data-role="footer" data-template="#footer-template"></footer>
+	</section>
+ 
+ 
+	<section data-role="page" id="list-page">
+		<header data-role="header">
+			<h1>Animal list</h1>
+		</header>
+		<div data-role="main"><div class="overscroll">
+			<div class="animal-list">
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div><img src="img/add.png" alt=""></div>
+				</a>
+			</div>
+		</div></div>
+		<footer data-role="footer" data-template="#footer-template"></footer>
+	</section>
+ 
+ 
+ 
+	<!-- USER DATA SECTION -->
+ 
+	<section data-role="page" id="user-profile-page">
+		<div data-role="main">
+			<div class="overscroll">
+				<div class="photo">img</div>   	
+				<div class="user-name">User name</div>
+				<div class="user-email">email.example@gmail.com</div>
+	
+				<div class="my-animal-title">My Fox</div>
+				<div class="my-animal">
+					<div class="single-image">img</div>
+					<div class="single-image">img</div>
+					<div class="single-image">img</div>
+					<div class="single-image">img</div>
+				</div>
+				<a href="#signin-page"><div class="btn-logout js-logout">Log out</div></a>
+			</div>
+		</div>
+     	<footer data-role="footer" data-template="#footer-template"></footer>
+	</section>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<!--  ANIMAL DATA SECTION -->
+ 
+	<section data-role="page" id="animal-profile-page">
+	   <div data-role="main">
+			<div class="page-head">
+				<a href="#list-page"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
+				<input type="file" id="upload-photo" class="upload-input" data-role="none">
+				<img src="img/upload.svg" class="btn-upload">
+			</div>
+			<div class="page-content">
+				<div class="btn-delete"><img src="img/delete.png" alt=""></div>
+				<div class="input-block">
+					<label for="">Name</label>
+					<input type="text" placeholder='Name'>
+				</div>
+				<div class="input-block">
+					<label for="">Varieties</label>
+					<input type="text" placeholder='Varieties'>
+				</div>
+				<div class="input-block">
+					<label for="">Color</label>
+					<input type="text" placeholder='Color'>
+				</div>
+				<div class="input-block">
+					<label for="">Location</label>
+					<input type="text" placeholder='Location'>
+				</div>
+				<a href="#list-page"><div class="btn-save">Save</div></a>
+			</div>
+	   </div>
+	</section>
+ 
+ 
+ 
+	<script type="text/template" id="footer-template">
+		<ul>
+			<li><a href="#recent-page"><img src="img/map.png" alt="map"></a></li>
+			<li><a href="#list-page"><img src="img/list1.png" alt="list"></a></li>
+			<li><a href="#user-profile-page"><img src="img/user.png" alt="user"></a></li>
+		</ul>
+	</script>
+ 
+	<script type="text/template" id="animal-link-template">
+		<div>Animal 1</div>
+	</script>
+ 
+ </body>
 </html>
