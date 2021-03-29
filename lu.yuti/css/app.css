@@ -140,6 +140,7 @@ a:hover {
    margin:0;
    font-size:1.2rem;
    padding:0;
+   color: var(--color-main-light);
 }
 
 
@@ -183,12 +184,12 @@ a:hover {
 .ui-mobile .form-label {
     margin: 1em 0;
     font-size: 0.7em;
-    color: var(--color-neutral-medium);
+    color: var(--color-balck);
 }
 .form-input {
     width: 100%;
     display: inline-block;
-    border: 1px solid var(--color-neutral-medium);
+    border: 1px solid var(--color-balck);
     margin: 0;
     padding: 0.5em 1em;
     border-radius: 0.3em;
@@ -262,7 +263,9 @@ a:hover {
   transform: translate(-50%,-50%);
   pointer-events:initial;
 }
-
+.modal-popup.small {
+  width:initial;
+}
 
 
 
@@ -298,7 +301,7 @@ a:hover {
 
 .modal-head,
 .modal-foot {
-  background-color:var(--color-neutral-light);
+  background-color:var(--color-white);
   padding:0.5em 1em;
 }
 .modal-body {
@@ -561,7 +564,7 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
-#user-profile-page .btn-logout{
+#user-profile-page .btn-save{
   color: var(--color-white);
   border-radius: 10px;
   width: 120px;
@@ -574,8 +577,33 @@ a:hover {
   margin: auto;
   margin-bottom: 65px;
 }
-
-
+#user-profile-page .page-content{
+  padding: 0 16px;
+}
+#user-profile-page .input-block{
+  margin-bottom: 32px;
+}
+#user-profile-page .input-block .ui-input-text{
+  border: 0;
+}
+#user-profile-page .input-block label{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+#user-profile-page .input-block input{
+  border: 0;
+  border-bottom: 1px solid #424242;
+}
+#user-profile-page .icon-container{
+  display: flex;
+  justify-content: flex-end;
+}
+#user-profile-page .icon-logout img{
+  width: 24px; 
+  height: 24px;
+  margin: 14px 14px 0 0;
+}
 
 /*ANIMAL PROFILE PAGE*/
 #animal-profile-page .page-head{

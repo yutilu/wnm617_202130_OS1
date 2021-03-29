@@ -20,6 +20,7 @@
 
 	<section data-role="page" id="signin-page">
 	   <div data-role="main" class="display-flex flex-vertical">
+		<div class="overscroll">
 		  <div class="flex-none">
 			<div class="logo">
 				<img src="img/fox_logo.png" alt="logo">
@@ -43,6 +44,7 @@
 				<div class="register">
 					Don't have an account? <span><a href='#signup-page'>Sign up</a></span>
 				</div>
+			</div>
 		  </div>
 	   </div>
 	</section>
@@ -50,12 +52,13 @@
 
 	<section data-role="page" id="signup-page">
 		<div data-role="main" class="display-flex flex-vertical">
+		  <div class="overscroll">
 		   <div class="flex-none">
 			 <div class="logo">
 				 <img src="img/fox_logo.png" alt="logo">
 			 </div>
 			 <div class="hello">
-				 <h1>Sign up</h1>
+				 <h1>Hello,<br/>Sign up.</h1>
 			 </div>
 				 <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
 					<div class="form-control">
@@ -73,6 +76,7 @@
 				 <div class="register">
 					 Already have an account? <span><a href='#signin-page'>Login</a></span>
 				 </div>
+			</div>
 		   </div>
 		</div>
 	 </section>
@@ -80,6 +84,16 @@
  
 	<section data-role="page" id="recent-page">
 	   <div data-role="main"></div>
+	   		<div class="map-icon-test icon" style="position:absolute;left:45vw;top:42vh;font-size:2em" data-activate="#recent-test-modal">
+				<img src="img/pin.png" alt="">
+			</div>
+
+			<div class="modal" id="recent-test-modal">
+					<div class="modal-popup small" data-deactivate="#recent-test-modal">
+				   		<div class="modal-body">Fox Amber</div>
+					</div>
+			 	</div>
+		  	</div>
 	   <footer data-role="footer" data-template="#footer-template"></footer>
 	</section>
  
@@ -87,6 +101,12 @@
 	<section data-role="page" id="list-page">
 		<header data-role="header">
 			<h1>Fox list</h1>
+			<!-- *Note Plus button -->
+			<!-- <ul>
+				<li class="flex-stretch"></li>
+				<li><img src="img/plus.png" class="js-list-add-animal"
+				   data-activate="#list-add-modal"></li>
+			 </ul> -->
 		</header>
 		<div data-role="main"><div class="overscroll">
 			<div class="animal-list">
@@ -126,7 +146,36 @@
 			</div>
 		</div></div>
 		<footer data-role="footer" data-template="#footer-template"></footer>
+
+		<!-- *Note Popup -->
+		<!-- <div class="modal" id="list-add-modal">
+			<div class="modal-back" data-deactivate="#list-add-modal"></div>
+			<form class="modal-popup" data-ajax="false" id="list-add-form">
+			   <div class="modal-head">Head</div>
+			   <div class="modal-body">
+				  <div class="form-control">
+					 <label for="list-add-name" class="form-label">Name</label>
+					 <input class="form-input" type="text" id="list-add-name" data-role="none">
+				  </div>
+				  <div class="form-control">
+					 <label for="list-add-type" class="form-label">Type</label>
+					 <input class="form-input" type="text" id="list-add-type" data-role="none">
+				  </div>
+				  <div class="form-control">
+					 <label for="list-add-breed" class="form-label">Breed</label>
+					 <input class="form-input" type="text" id="list-add-breed" data-role="none">
+				  </div>
+			   </div>
+			   <div class="modal-foot display-flex">
+				  <div class="flex-stretch"></div>
+				  <div class="flex-none">
+					 <a href="#" data-deactivate="#list-add-modal">Submit</a>
+				  </div>
+			   </div>
+			</form>
+		 </div> -->
 	</section>
+
  
  
  
@@ -135,6 +184,10 @@
 	<section data-role="page" id="user-profile-page">
 		<div data-role="main">
 			<div class="overscroll">
+				<div class="icon-container">
+					<a href="#signin-page"><div class="icon-logout"><img src="img/logout.png" alt=""></div></a>
+				</div>
+
 				<div class="photo">img</div>   	
 				<div class="user-name">User name</div>
 				<div class="user-email">email.example@gmail.com</div>
@@ -146,7 +199,23 @@
 					<div class="single-image">img</div>
 					<div class="single-image">img</div>
 				</div>
-				<a href="#signin-page"><div class="btn-logout js-logout">Log out</div></a>
+
+				<div class="page-content">
+					<div class="input-block">
+						<label for="">Username</label>
+						<input type="text" placeholder='Username'>
+					</div>
+					<div class="input-block">
+						<label for="">Email</label>
+						<input type="text" placeholder='Email'>
+					</div>
+					<div class="input-block">
+						<label for="">Password</label>
+						<input type="text" placeholder='Password'>
+					</div>
+				</div>
+
+				<a href="#"><div class="btn-save">Save</div></a>
 			</div>
 		</div>
      	<footer data-role="footer" data-template="#footer-template"></footer>
@@ -166,6 +235,7 @@
  
 	<section data-role="page" id="animal-profile-page">
 	   <div data-role="main">
+		<div class="overscroll">
 			<div class="page-head">
 				<a href="#list-page"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
 				<input type="file" id="upload-photo" class="upload-input" data-role="none">
@@ -190,7 +260,8 @@
 					<input type="text" placeholder='Location'>
 				</div>
 				<a href="#list-page"><div class="btn-save">Save</div></a>
-			</div>
+				</div>
+	   		</div>
 	   </div>
 	</section>
  
