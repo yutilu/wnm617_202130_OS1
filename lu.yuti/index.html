@@ -1,43 +1,283 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Yuti Lu</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Fox Tracker</title>
+
+	<base href="/aau/wnm617/lu.yuti/">
+
+	<link rel="stylesheet" type="text/css" href="lib/css/jquery.mobile.structure-1.4.5.min.css">
+	<link rel="stylesheet" href="css/app.css">
+
+	<script src="lib/js/jquery-2.2.4.min.js"></script>
+  <script src="js/signin.js"></script>
+	<script src="js/app.js"></script>
+	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-	<header>
-		<img src="img/yutilogo.png" alt="logo" class="logo">
-		<nav>
-			<div class="header-tab header-tab-active"><a href="index.html">Work</a></div>
-			<div class="header-tab"><a href="about.html">Me</a></div>
-		</nav>
-	</header>
 
-	<div class="position-block container">
-		<div class="position-block-text">
-			<h1>Hello!</h1>
-			<h1>I am Yuti Lu. I am an UI/UX designer who wanted to be in web design since I was 16. Because I get to do everything I love: design, art, skiing, and music.</h1>
-			<p>Scroll down to see my work!</p>
+
+	<section data-role="page" id="signin-page">
+	   <div data-role="main" class="display-flex flex-vertical">
+		<div class="overscroll">
+		  <div class="flex-none">
+			<div class="logo">
+				<img src="img/fox_logo.png" alt="logo">
+			</div>
+			<div class="hello">
+				<h1>Hello,<br/>Login now.</h1>
+			</div>
+				<form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+					<div class="form-control">
+						<img class="prefix" src="img/msg.png" alt="">
+						<input class="form-input" type="text" id="signin-username" data-role="none"  placeholder="Email">
+					</div>
+					<div class="form-control">
+						<img class="prefix" src="img/pw.png" alt="">
+						<input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
+					</div>
+					<div class="form-control">
+						<input type="submit" class="form-button sign-in-button" value="Login" data-role="none">
+					</div>
+				</form>
+				<div class="register">
+					Don't have an account? <span><a href='#signup-page'>Sign up</a></span>
+				</div>
+			</div>
+		  </div>
+	   </div>
+	</section>
+
+
+	<section data-role="page" id="signup-page">
+		<div data-role="main" class="display-flex flex-vertical">
+		  <div class="overscroll">
+		   <div class="flex-none">
+			 <div class="logo">
+				 <img src="img/fox_logo.png" alt="logo">
+			 </div>
+			 <div class="hello">
+				 <h1>Hello,<br/>Sign up.</h1>
+			 </div>
+				 <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+					<div class="form-control">
+						<img class="prefix" src="img/msg.png" alt="">
+						<input class="form-input" type="text" id="signin-username" data-role="none"  placeholder="Please enter your email">
+					</div>
+					<div class="form-control">
+						<img class="prefix" src="img/pw.png" alt="">
+						<input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Please enter a password">
+					</div>
+					<div class="form-control">
+						<a href='#signin-page' class="form-button sign-in-button"data-role="none">Sign up</a>
+					</div>
+				 </form>
+				 <div class="register">
+					 Already have an account? <span><a href='#signin-page'>Login</a></span>
+				 </div>
+			</div>
+		   </div>
 		</div>
-	</div>	
+	 </section>
+ 
+ 
+	<section data-role="page" id="recent-page">
+	   <div data-role="main"></div>
+	   		<div class="map-icon-test icon" style="position:absolute;left:45vw;top:42vh;font-size:2em" data-activate="#recent-test-modal">
+				<img src="img/pin.png" alt="">
+			</div>
 
-	<div class="works-block">
-		<div class="single-work"><img src="https://picsum.photos/800/600"></div>
-		<div class="single-work"><img src="https://picsum.photos/800/600"></div>
-		<div class="single-work"><img src="https://picsum.photos/800/600"></div>
-		<div class="single-work"><img src="https://picsum.photos/800/600"></div>
-	</div>
+			<div class="modal" id="recent-test-modal">
+					<div class="modal-popup small" data-deactivate="#recent-test-modal">
+				   		<div class="modal-body">Fox Amber</div>
+					</div>
+			 	</div>
+		  	</div>
+	   <footer data-role="footer" data-template="#footer-template"></footer>
+	</section>
+ 
+ 
+	<section data-role="page" id="list-page">
+		<header data-role="header">
+			<h1>Fox list</h1>
+			<!-- *Note Plus button -->
+			<!-- <ul>
+				<li class="flex-stretch"></li>
+				<li><img src="img/plus.png" class="js-list-add-animal"
+				   data-activate="#list-add-modal"></li>
+			 </ul> -->
+		</header>
+		<div data-role="main"><div class="overscroll">
+			<div class="animal-list">
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div data-template="#animal-link-template"></div>
+				</a>
+				<a href="#animal-profile-page" class="single-animal">
+					<div><img src="img/add.png" alt=""></div>
+				</a>
+			</div>
+		</div></div>
+		<footer data-role="footer" data-template="#footer-template"></footer>
 
-	<div class="work-together-block">
-		<h2>Let's Work Together</h2>
-	</div>
+		<!-- *Note Popup -->
+		<!-- <div class="modal" id="list-add-modal">
+			<div class="modal-back" data-deactivate="#list-add-modal"></div>
+			<form class="modal-popup" data-ajax="false" id="list-add-form">
+			   <div class="modal-head">Head</div>
+			   <div class="modal-body">
+				  <div class="form-control">
+					 <label for="list-add-name" class="form-label">Name</label>
+					 <input class="form-input" type="text" id="list-add-name" data-role="none">
+				  </div>
+				  <div class="form-control">
+					 <label for="list-add-type" class="form-label">Type</label>
+					 <input class="form-input" type="text" id="list-add-type" data-role="none">
+				  </div>
+				  <div class="form-control">
+					 <label for="list-add-breed" class="form-label">Breed</label>
+					 <input class="form-input" type="text" id="list-add-breed" data-role="none">
+				  </div>
+			   </div>
+			   <div class="modal-foot display-flex">
+				  <div class="flex-stretch"></div>
+				  <div class="flex-none">
+					 <a href="#" data-deactivate="#list-add-modal">Submit</a>
+				  </div>
+			   </div>
+			</form>
+		 </div> -->
+	</section>
 
-	<div class="contact-block">
-		<a href="https://www.instagram.com/yuti_lu/" target="_blank">Instagram</a>
-		<a href="https://www.linkedin.com/in/yuti-lu-15382317a/" target="_blank">Linkedin</a>
-	</div>
-</body>
+ 
+ 
+ 
+	<!-- USER DATA SECTION -->
+ 
+	<section data-role="page" id="user-profile-page">
+		<div data-role="main">
+			<div class="overscroll">
+				<div class="icon-container">
+					<a href="#signin-page"><div class="icon-logout"><img src="img/logout.png" alt=""></div></a>
+				</div>
+
+				<div class="photo">img</div>   	
+				<div class="user-name">User name</div>
+				<div class="user-email">email.example@gmail.com</div>
+	
+				<div class="my-animal-title">My Fox</div>
+				<div class="my-animal">
+					<div class="single-image">img</div>
+					<div class="single-image">img</div>
+					<div class="single-image">img</div>
+					<div class="single-image">img</div>
+				</div>
+
+				<div class="page-content">
+					<div class="input-block">
+						<label for="">Username</label>
+						<input type="text" placeholder='Username'>
+					</div>
+					<div class="input-block">
+						<label for="">Email</label>
+						<input type="text" placeholder='Email'>
+					</div>
+					<div class="input-block">
+						<label for="">Password</label>
+						<input type="text" placeholder='Password'>
+					</div>
+				</div>
+
+				<a href="#"><div class="btn-save">Save</div></a>
+			</div>
+		</div>
+     	<footer data-role="footer" data-template="#footer-template"></footer>
+	</section>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+	<!--  ANIMAL DATA SECTION -->
+ 
+	<section data-role="page" id="animal-profile-page">
+	   <div data-role="main">
+		<div class="overscroll">
+			<div class="page-head">
+				<a href="#list-page"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
+				<input type="file" id="upload-photo" class="upload-input" data-role="none">
+				<img src="img/upload.svg" class="btn-upload">
+			</div>
+			<div class="page-content">
+				<div class="btn-delete"><img src="img/delete.png" alt=""></div>
+				<div class="input-block">
+					<label for="">Name</label>
+					<input type="text" placeholder='Name'>
+				</div>
+				<div class="input-block">
+					<label for="">Varieties</label>
+					<input type="text" placeholder='Varieties'>
+				</div>
+				<div class="input-block">
+					<label for="">Color</label>
+					<input type="text" placeholder='Color'>
+				</div>
+				<div class="input-block">
+					<label for="">Location</label>
+					<input type="text" placeholder='Location'>
+				</div>
+				<a href="#list-page"><div class="btn-save">Save</div></a>
+				</div>
+	   		</div>
+	   </div>
+	</section>
+ 
+ 
+ 
+	<script type="text/template" id="footer-template">
+		<ul>
+			<li><a href="#recent-page"><img src="img/map.png" alt="map"></a></li>
+			<li><a href="#list-page"><img src="img/list1.png" alt="list"></a></li>
+			<li><a href="#user-profile-page"><img src="img/user.png" alt="user"></a></li>
+		</ul>
+	</script>
+ 
+	<script type="text/template" id="animal-link-template">
+		<div>Animal 1</div>
+	</script>
+ 
+ </body>
 </html>
