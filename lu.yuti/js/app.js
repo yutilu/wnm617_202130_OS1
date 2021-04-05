@@ -32,9 +32,11 @@ $(()=>{
       $(target).toggleClass("active");
    })
 
-   .on("click", ".btn-upload",function(e){
-      $("#upload-photo").click()
-   })
+
+
+
+
+
 
 
 

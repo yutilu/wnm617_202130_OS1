@@ -470,7 +470,7 @@ a:hover {
    left: 0;
    top: 3px;
  }
- #signup-page .sign-in-button{
+ #signup-page .sign-up-button{
    color: var(--color-white);
    border-radius: 10px;
    width: 120px;
@@ -479,7 +479,7 @@ a:hover {
    justify-content: center;
    align-items: center;
    font-weight: 700;
-   background: var(--color-main-light);
+   background: var(--color-main-dark);
    margin: auto;
    margin-bottom: 65px;
    border: 0;
@@ -489,7 +489,7 @@ a:hover {
    margin-bottom: 24px;
  }
  #signup-page .register span{
-   color: var(--color-main-light);
+   color: var(--color-main-dark);
  }
 
 
@@ -503,18 +503,36 @@ a:hover {
 }
 #list-page .single-animal{
   flex-basis: calc(50% - 12px);
-  height: 150px;
   border-radius: 10px;
   background: #ececec;
   margin-bottom: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+#list-page .single-animal .name{
+  position: absolute;
+  color: #ffffff;
+  font-size: 20px;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  border-radius: 0 0 10px 10px;
+  padding: 6px 0;
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0, rgba(0, 0, 0, 0), 80%)
 }
 #list-page .single-animal img{
-  width: 60px; height: 60px;
+  width: 100%;
+  border-radius: 10px;
 }
-
+#list-page .icon-add img{
+  width: 22px; 
+  height: 22px;
+  margin-top: 28px;
+  /* margin: 14px 14px 0 0; */
+}
 
 
 #user-profile-page .photo{
@@ -522,11 +540,11 @@ a:hover {
   width: 120px;
   height: 120px;
   border-radius: 60px;
-  background-color: #ececec;
+  /* background-color: #ececec; */
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 32px auto 12px auto;
+  margin: 32px auto 20px auto;
 }
 
 #user-profile-page .user-name{
@@ -538,7 +556,7 @@ a:hover {
 #user-profile-page .user-email{
     font-size: 14px;
     font-weight: 300;
-    margin-bottom: 36px;
+    margin-bottom: 44px;
     text-align: center;
 }
 #user-profile-page .my-animal-title{
@@ -564,7 +582,12 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
-#user-profile-page .btn-save{
+#user-profile-page .my-animal .single-image img{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+#user-profile-page .btn-edit-profile{
   color: var(--color-white);
   border-radius: 10px;
   width: 120px;
@@ -605,12 +628,140 @@ a:hover {
   margin: 14px 14px 0 0;
 }
 
-/*ANIMAL PROFILE PAGE*/
+
+/*PROFILE EDIT PAGE*/
+#user-profile-edit-page .photo{
+  margin-top: 32px;
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px auto 20px auto;
+}
+#user-profile-edit-page .page-content{
+  padding: 0 16px;
+}
+#user-profile-edit-page .input-block{
+  margin-bottom: 32px;
+}
+#user-profile-edit-page .input-block .ui-input-text{
+  border: 0;
+}
+#user-profile-edit-page .input-block label{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+#user-profile-edit-page .input-block input{
+  border: 0;
+  border-bottom: 1px solid #424242;
+}
+#user-profile-edit-page .btn-save{
+  color: var(--color-white);
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  background: var(--color-main-light);
+  margin: auto;
+  margin-bottom: 65px;
+}
+#user-profile-edit-page .btn-goback{
+  display: inline-block;
+}
+#user-profile-edit-page .btn-goback img{
+  width: 24px; height: 24px;
+  margin: 16px 0 0 16px;
+}
+#user-profile-edit-page .change-photo{
+  color: #c66647;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/*ANIMAL PROFILE ADD PAGE*/
+#animal-profile-add-page .page-head{
+  height: 240px;
+  border-radius: 0 0 10px 10px;
+  background: #ececec;
+  position: relative;
+}
+#animal-profile-add-page .btn-goback{
+  display: inline-block;
+}
+#animal-profile-add-page .btn-goback img{
+  width: 24px; height: 24px;
+  margin: 16px 0 0 16px;
+}
+#animal-profile-add-page .upload-input{
+  display: none;
+}
+#animal-profile-add-page .btn-upload{
+  width: 24px; height: 24px;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  padding: 2px;
+}
+#animal-profile-add-page .page-content{
+  padding: 0 16px;
+}
+#animal-profile-add-page .btn-delete{
+  width: 24px; height: 24px;
+  margin: 24px 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+#animal-profile-add-page .input-block{
+  margin-bottom: 32px;
+}
+#animal-profile-add-page .input-block .ui-input-text{
+  border: 0;
+}
+#animal-profile-add-page .input-block label{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+#animal-profile-add-page .input-block input{
+  border: 0;
+  border-bottom: 1px solid #424242;
+}
+#animal-profile-add-page .input-block input::placeholder{
+  color: #9f9f9f;
+}
+#animal-profile-add-page .btn-save{
+  color: var(--color-white);
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  background: var(--color-main-light);
+  margin: auto;
+  margin-bottom: 65px;
+}
+
+/*ANIMAL PROFILE DATA PAGE*/
 #animal-profile-page .page-head{
   height: 240px;
   border-radius: 0 0 10px 10px;
   background: #ececec;
   position: relative;
+  background-image: url('../img/amber-large.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 #animal-profile-page .btn-goback{
   display: inline-block;
@@ -670,4 +821,15 @@ a:hover {
   background: var(--color-main-light);
   margin: auto;
   margin-bottom: 65px;
+}
+#animal-profile-page .icon-edit{
+  width: 24px; 
+  height: 24px;
+  top: 16px;
+  right: 16px;
+  position: absolute;
+}
+#animal-profile-page .icon-edit img{
+  width: 24px; 
+  height: 24px;
 }

@@ -30,8 +30,8 @@
 			</div>
 				<form class="form" id="signin-form" data-ajax="false" style="padding:1em">
 					<div class="form-control">
-						<img class="prefix" src="img/msg.png" alt="">
-						<input class="form-input" type="text" id="signin-username" data-role="none"  placeholder="Email">
+						<img class="prefix" src="img/user1.png" alt="">
+						<input class="form-input" type="text" id="signin-username" data-role="none"  placeholder="Username">
 					</div>
 					<div class="form-control">
 						<img class="prefix" src="img/pw.png" alt="">
@@ -58,19 +58,23 @@
 				 <img src="img/fox_logo.png" alt="logo">
 			 </div>
 			 <div class="hello">
-				 <h1>Hello,<br/>Sign up.</h1>
+				 <h1>Create an account<br/></h1>
 			 </div>
-				 <form class="form" id="signin-form" data-ajax="false" style="padding:1em">
+				 <form class="form" id="signup-form" data-ajax="false" style="padding:1em">
 					<div class="form-control">
 						<img class="prefix" src="img/msg.png" alt="">
-						<input class="form-input" type="text" id="signin-username" data-role="none"  placeholder="Please enter your email">
+						<input class="form-input" type="text" id="signup-useremail" data-role="none"  placeholder="Enter email address">
+					</div>
+					<div class="form-control">
+						<img class="prefix" src="img/user1.png" alt="">
+						<input class="form-input" type="text" id="signup-username" data-role="none"  placeholder="Enter username">
 					</div>
 					<div class="form-control">
 						<img class="prefix" src="img/pw.png" alt="">
-						<input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Please enter a password">
+						<input class="form-input" type="password" id="signup-password" data-role="none" placeholder="Enter password">
 					</div>
 					<div class="form-control">
-						<a href='#signin-page' class="form-button sign-in-button"data-role="none">Sign up</a>
+						<a href='#signin-page' class="form-button sign-up-button"data-role="none">Sign up</a>
 					</div>
 				 </form>
 				 <div class="register">
@@ -90,7 +94,7 @@
 
 			<div class="modal" id="recent-test-modal">
 					<div class="modal-popup small" data-deactivate="#recent-test-modal">
-				   		<div class="modal-body">Fox Amber</div>
+						<div class="modal-body">Amber</div>
 					</div>
 			 	</div>
 		  	</div>
@@ -101,6 +105,15 @@
 	<section data-role="page" id="list-page">
 		<header data-role="header">
 			<h1>Fox list</h1>
+			<ul>
+            <li class="flex-stretch"></li>
+            <li>
+				<a href="#animal-profile-add-page">
+					<div class="icon-add"><img src="img/plus.png" alt=""></div>
+				</a>
+			</li>
+ 			</ul>
+				
 			<!-- *Note Plus button -->
 			<!-- <ul>
 				<li class="flex-stretch"></li>
@@ -111,47 +124,58 @@
 		<div data-role="main"><div class="overscroll">
 			<div class="animal-list">
 				<a href="#animal-profile-page" class="single-animal">
-					<div data-template="#animal-link-template"></div>
+					<div class="name">Amber</div>
+					<img src="img/amber.png" alt="">
 				</a>
 				<a href="#animal-profile-page" class="single-animal">
-					<div data-template="#animal-link-template"></div>
+					<div class="name">Luna</div>
+					<img src="img/luna.png" alt="">
 				</a>
 				<a href="#animal-profile-page" class="single-animal">
-					<div data-template="#animal-link-template"></div>
+					<div class="name">Rosy</div>
+					<img src="img/rosy.png" alt="">
 				</a>
 				<a href="#animal-profile-page" class="single-animal">
-					<div data-template="#animal-link-template"></div>
+					<div class="name">Zorro</div>
+					<img src="img/zorro.png" alt="">
 				</a>
 				<a href="#animal-profile-page" class="single-animal">
-					<div data-template="#animal-link-template"></div>
+					<div class="name">Amber</div>
+					<img src="img/amber.png" alt="">
 				</a>
 				<a href="#animal-profile-page" class="single-animal">
-					<div data-template="#animal-link-template"></div>
+					<div class="name">Amber</div>
+					<img src="img/amber.png" alt="">
 				</a>
 				<a href="#animal-profile-page" class="single-animal">
-					<div data-template="#animal-link-template"></div>
+					<div class="name">Amber</div>
+					<img src="img/amber.png" alt="">
 				</a>
 				<a href="#animal-profile-page" class="single-animal">
-					<div data-template="#animal-link-template"></div>
+					<div class="name">Amber</div>
+					<img src="img/amber.png" alt="">
 				</a>
 				<a href="#animal-profile-page" class="single-animal">
-					<div data-template="#animal-link-template"></div>
+					<div class="name">Amber</div>
+					<img src="img/amber.png" alt="">
 				</a>
 				<a href="#animal-profile-page" class="single-animal">
-					<div data-template="#animal-link-template"></div>
+					<div class="name">Amber</div>
+					<img src="img/amber.png" alt="">
 				</a>
-				<a href="#animal-profile-page" class="single-animal">
+				
+				<!-- <a href="#animal-profile-page" class="single-animal">
 					<div><img src="img/add.png" alt=""></div>
-				</a>
+				</a> -->
 			</div>
 		</div></div>
 		<footer data-role="footer" data-template="#footer-template"></footer>
 
 		<!-- *Note Popup -->
-		<!-- <div class="modal" id="list-add-modal">
+		<div class="modal" id="list-add-modal">
 			<div class="modal-back" data-deactivate="#list-add-modal"></div>
 			<form class="modal-popup" data-ajax="false" id="list-add-form">
-			   <div class="modal-head">Head</div>
+			   <!-- <div class="modal-head">Head</div>
 			   <div class="modal-body">
 				  <div class="form-control">
 					 <label for="list-add-name" class="form-label">Name</label>
@@ -171,9 +195,9 @@
 				  <div class="flex-none">
 					 <a href="#" data-deactivate="#list-add-modal">Submit</a>
 				  </div>
-			   </div>
+			   </div> -->
 			</form>
-		 </div> -->
+		 </div>
 	</section>
 
  
@@ -188,19 +212,19 @@
 					<a href="#signin-page"><div class="icon-logout"><img src="img/logout.png" alt=""></div></a>
 				</div>
 
-				<div class="photo">img</div>   	
-				<div class="user-name">User name</div>
-				<div class="user-email">email.example@gmail.com</div>
+				<div class="photo"><img src="img/userimg.png" alt=""></div>   	
+				<div class="user-name">Yuti Lu</div>
+				<div class="user-email">yutilu0627@gmail.com</div>
 	
-				<div class="my-animal-title">My Fox</div>
+				<div class="my-animal-title">My Favorite Fox</div>
 				<div class="my-animal">
-					<div class="single-image">img</div>
-					<div class="single-image">img</div>
-					<div class="single-image">img</div>
-					<div class="single-image">img</div>
+					<div class="single-image"><img src="img/amber.png" alt=""></div>
+					<div class="single-image"><img src="img/luna.png" alt=""></div>
+					<div class="single-image"><img src="img/zorro.png" alt=""></div>
+					<div class="single-image"><img src="img/rosy.png" alt=""></div>
 				</div>
 
-				<div class="page-content">
+				<!-- <div class="page-content">
 					<div class="input-block">
 						<label for="">Username</label>
 						<input type="text" placeholder='Username'>
@@ -213,27 +237,54 @@
 						<label for="">Password</label>
 						<input type="text" placeholder='Password'>
 					</div>
-				</div>
+				</div> -->
 
-				<a href="#"><div class="btn-save">Save</div></a>
+				<a href="#user-profile-edit-page"><div class="btn-edit-profile">Edit Profile</div></a>
 			</div>
 		</div>
      	<footer data-role="footer" data-template="#footer-template"></footer>
 	</section>
  
+	<!-- USER PROFILE EDIT SECTION -->
+
+	<section data-role="page" id="user-profile-edit-page">
+		<div data-role="main">
+			<div class="overscroll">
+				<div class="page-head">
+					<a href="#user-profile-page"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
+				</div>
+				<div class="photo"><img src="img/userimg.png" alt=""></div>   
+				<div class="change-photo-content">
+					<div class="change-photo">Change Profile Photo</div>
+				</div>	
+				<div class="page-content">
+					<div class="input-block">
+						<label for="">Username</label>
+						<input type="text" placeholder='Yuti Lu'>
+					</div>
+					<div class="input-block">
+						<label for="">Email</label>
+						<input type="text" placeholder='yutilu0627@gmail.com'>
+					</div>
+					<div class="input-block">
+						<label for="">Password</label>
+						<input type="text" placeholder='•••••••••'>
+					</div>
+				</div>
+
+				<a href="#user-profile-page"><div class="btn-save">Save</div></a>
+			</div>
+		</div>
+     	
+	</section>
  
  
+
  
  
+	<!--  ANIMAL ADD SECTION -->
  
- 
- 
- 
- 
- 
-	<!--  ANIMAL DATA SECTION -->
- 
-	<section data-role="page" id="animal-profile-page">
+	<section data-role="page" id="animal-profile-add-page">
 	   <div data-role="main">
 		<div class="overscroll">
 			<div class="page-head">
@@ -256,14 +307,57 @@
 					<input type="text" placeholder='Color'>
 				</div>
 				<div class="input-block">
-					<label for="">Location</label>
-					<input type="text" placeholder='Location'>
+					<label for="">Note</label>
+					<input type="text" placeholder='Note'>
 				</div>
 				<a href="#list-page"><div class="btn-save">Save</div></a>
 				</div>
 	   		</div>
 	   </div>
 	</section>
+
+
+	<!--  ANIMAL DATA SECTION -->
+ 
+	<section data-role="page" id="animal-profile-page">
+		<div data-role="main">
+		 <div class="overscroll">
+			 <div class="page-head">
+				<a href="#list-page">
+					<div class="btn-goback">
+						<img src="img/goback-w.png" alt="">
+					</div>
+				</a>
+				<a href="#animal-profile-add-page">
+					<div class="icon-edit">
+						<img src="img/edit-w.png" alt="">
+					</div>
+				</a>
+			</div>
+			 <div class="page-content">
+				 <div class="btn-delete"><img src="" alt=""></div>
+				 <!-- <div class="btn-delete"><img src="img/delete.png" alt=""></div> -->
+				 <div class="input-block">
+					 <label for="">Name</label>
+					 <p>Amber</p>
+				 </div>
+				 <div class="input-block">
+					 <label for="">Varieties</label>
+					 <p>Swift Fox</p>
+				 </div>
+				 <div class="input-block">
+					 <label for="">Color</label>
+					 <p>Cream and tan</p>
+				 </div>
+				 <div class="input-block">
+					 <label for="">Note</label>
+					 <p>I saw this fox Amber near Grand Lake two days ago in the afternoon at 2 pm. This is the most beautiful fox I've ever seen. Her color is cream and tan, a very beautiful color. She looks very small, a little thin. Maybe it's because it's hard to survive in the wild, so she's very small.</p>
+				 </div>
+				 <!-- <a href="#list-page"><div class="btn-save">Save</div></a> -->
+				 </div>
+				</div>
+		</div>
+	 </section>
  
  
  
@@ -273,10 +367,6 @@
 			<li><a href="#list-page"><img src="img/list1.png" alt="list"></a></li>
 			<li><a href="#user-profile-page"><img src="img/user.png" alt="user"></a></li>
 		</ul>
-	</script>
- 
-	<script type="text/template" id="animal-link-template">
-		<div>Animal 1</div>
 	</script>
  
  </body>
