@@ -1,0 +1,502 @@
+[
+  {
+    "id": 1,
+    "user_id": 3,
+    "name": "Mazuda",
+    "type": "fox",
+    "breed": "cape fox",
+    "description": "Occaecat ex enim ipsum est commodo duis reprehenderit. Aliquip anim non reprehenderit voluptate quis commodo ipsum esse consectetur. Sit laboris nisi sunt enim proident deserunt pariatur nisi mollit.",
+    "img": "https://via.placeholder.com/400/976/fff/?text=Mazuda",
+    "date_create": "2020-03-09 02:57:10"
+  },
+  {
+    "id": 2,
+    "user_id": 3,
+    "name": "Frenex",
+    "type": "fox",
+    "breed": "cape fox",
+    "description": "Cillum irure esse veniam quis ex sint culpa. Aliqua excepteur magna commodo sunt aute aliquip fugiat ipsum dolor. Ad exercitation fugiat ex exercitation culpa.",
+    "img": "https://via.placeholder.com/400/945/fff/?text=Frenex",
+    "date_create": "2020-07-04 07:20:04"
+  },
+  {
+    "id": 3,
+    "user_id": 9,
+    "name": "Junipoor",
+    "type": "fox",
+    "breed": "fennec fox",
+    "description": "Aliquip anim ex elit cupidatat esse sit adipisicing officia elit. Est duis id dolore minim duis est. Ut tempor voluptate proident excepteur laborum sint.",
+    "img": "https://via.placeholder.com/400/945/fff/?text=Junipoor",
+    "date_create": "2020-01-14 05:25:12"
+  },
+  {
+    "id": 4,
+    "user_id": 1,
+    "name": "Zuvy",
+    "type": "fox",
+    "breed": "corsac fox",
+    "description": "Id ea consequat Lorem enim nisi cillum laboris laboris eiusmod aute consequat excepteur sunt aliquip. Elit tempor nulla cillum fugiat adipisicing aliquip mollit qui nostrud Lorem cillum fugiat qui. Sunt est dolore ipsum sit nisi elit consectetur ex reprehenderit cupidatat tempor culpa adipisicing ad.",
+    "img": "https://via.placeholder.com/400/911/fff/?text=Zuvy",
+    "date_create": "2020-08-23 06:12:32"
+  },
+  {
+    "id": 5,
+    "user_id": 1,
+    "name": "Enomen",
+    "type": "fox",
+    "breed": "red fox",
+    "description": "Amet veniam et eiusmod officia ex consequat. Irure excepteur laborum ad quis incididunt. Laboris occaecat ex elit consectetur consectetur quis ex.",
+    "img": "https://via.placeholder.com/400/714/fff/?text=Enomen",
+    "date_create": "2020-11-30 03:43:48"
+  },
+  {
+    "id": 6,
+    "user_id": 9,
+    "name": "Hopeli",
+    "type": "fox",
+    "breed": "pale fox",
+    "description": "Voluptate amet enim ullamco aute culpa mollit aliqua esse. Dolor Lorem aliqua do esse ut sunt reprehenderit. Elit fugiat in minim aliqua reprehenderit ipsum do esse.",
+    "img": "https://via.placeholder.com/400/918/fff/?text=Hopeli",
+    "date_create": "2020-07-08 01:40:47"
+  },
+  {
+    "id": 7,
+    "user_id": 10,
+    "name": "Emoltra",
+    "type": "fox",
+    "breed": "swift fox",
+    "description": "Culpa fugiat ut id voluptate sit id exercitation anim et proident pariatur amet fugiat occaecat. Aliquip eiusmod labore proident qui amet cillum proident eiusmod duis nisi ullamco culpa fugiat. Dolore sit ut magna consequat dolor aliqua.",
+    "img": "https://via.placeholder.com/400/722/fff/?text=Emoltra",
+    "date_create": "2020-03-08 03:57:24"
+  },
+  {
+    "id": 8,
+    "user_id": 7,
+    "name": "Optyk",
+    "type": "fox",
+    "breed": "swift fox",
+    "description": "Ut id aliqua cupidatat enim. Laboris aliquip do cillum mollit sunt elit dolore. Minim duis occaecat labore duis non dolor do ullamco magna ut fugiat veniam.",
+    "img": "https://via.placeholder.com/400/794/fff/?text=Optyk",
+    "date_create": "2020-04-20 01:49:11"
+  },
+  {
+    "id": 9,
+    "user_id": 3,
+    "name": "Exotechno",
+    "type": "fox",
+    "breed": "arctic fox",
+    "description": "Fugiat aliqua mollit ipsum aliqua. Ullamco sint ut magna labore deserunt velit in sint mollit excepteur occaecat commodo irure. Proident cillum ullamco sint duis dolor dolor dolore commodo.",
+    "img": "https://via.placeholder.com/400/838/fff/?text=Exotechno",
+    "date_create": "2020-02-14 05:01:16"
+  },
+  {
+    "id": 10,
+    "user_id": 8,
+    "name": "Cyclonica",
+    "type": "fox",
+    "breed": "arctic fox",
+    "description": "Lorem irure cupidatat ad labore enim. In consequat ipsum culpa occaecat nostrud deserunt nisi est ut. Deserunt laborum duis dolor quis.",
+    "img": "https://via.placeholder.com/400/702/fff/?text=Cyclonica",
+    "date_create": "2020-11-09 02:10:53"
+  },
+  {
+    "id": 11,
+    "user_id": 3,
+    "name": "Lotron",
+    "type": "fox",
+    "breed": "pale fox",
+    "description": "Sunt magna minim in labore culpa laborum ad id aute. Aute deserunt ea occaecat est cupidatat ullamco ut ea sunt. Magna amet duis culpa do excepteur dolore est veniam excepteur tempor.",
+    "img": "https://via.placeholder.com/400/743/fff/?text=Lotron",
+    "date_create": "2020-03-01 11:04:49"
+  },
+  {
+    "id": 12,
+    "user_id": 6,
+    "name": "Billmed",
+    "type": "fox",
+    "breed": "arctic fox",
+    "description": "Voluptate deserunt ex anim voluptate anim incididunt Lorem. Excepteur commodo cillum fugiat in nisi eu laboris consequat proident dolore. Dolore officia fugiat aliqua nostrud id non deserunt nostrud voluptate labore magna.",
+    "img": "https://via.placeholder.com/400/749/fff/?text=Billmed",
+    "date_create": "2020-11-23 08:09:16"
+  },
+  {
+    "id": 13,
+    "user_id": 9,
+    "name": "Aquamate",
+    "type": "fox",
+    "breed": "pale fox",
+    "description": "Ipsum consectetur laboris fugiat amet velit qui duis culpa aliquip dolor nostrud magna elit. Consectetur magna quis anim et veniam exercitation ullamco aliqua exercitation aliqua enim pariatur. Aliquip sint reprehenderit nisi ullamco consequat.",
+    "img": "https://via.placeholder.com/400/750/fff/?text=Aquamate",
+    "date_create": "2021-01-16 07:33:56"
+  },
+  {
+    "id": 14,
+    "user_id": 9,
+    "name": "Avenetro",
+    "type": "fox",
+    "breed": "red fox",
+    "description": "Minim Lorem mollit nostrud dolor est non reprehenderit ipsum consequat veniam exercitation veniam qui aliqua. Id exercitation veniam magna labore nisi do exercitation excepteur proident labore eu. Incididunt consequat incididunt tempor magna reprehenderit.",
+    "img": "https://via.placeholder.com/400/799/fff/?text=Avenetro",
+    "date_create": "2020-02-21 07:18:17"
+  },
+  {
+    "id": 15,
+    "user_id": 5,
+    "name": "Artiq",
+    "type": "fox",
+    "breed": "swift fox",
+    "description": "Occaecat et sit do consequat ut qui cillum cupidatat velit non mollit sit ipsum. Dolor eu est anim laborum ipsum ipsum minim consectetur excepteur nostrud excepteur veniam. Magna excepteur deserunt elit nostrud ex proident ut ad.",
+    "img": "https://via.placeholder.com/400/905/fff/?text=Artiq",
+    "date_create": "2021-03-19 01:32:28"
+  },
+  {
+    "id": 16,
+    "user_id": 5,
+    "name": "Vicon",
+    "type": "fox",
+    "breed": "bengal fox",
+    "description": "Enim do labore est labore officia esse est voluptate laborum eu proident. Adipisicing ad velit officia aute labore veniam quis irure adipisicing eu. Ex eu sunt cillum nostrud nulla esse excepteur magna.",
+    "img": "https://via.placeholder.com/400/825/fff/?text=Vicon",
+    "date_create": "2020-06-20 11:16:37"
+  },
+  {
+    "id": 17,
+    "user_id": 10,
+    "name": "Assistia",
+    "type": "fox",
+    "breed": "red fox",
+    "description": "Proident eiusmod nulla in ea irure. Nulla irure sunt tempor nisi dolor officia ullamco pariatur. Aliquip culpa duis consequat tempor incididunt sunt sunt duis quis ad eiusmod elit.",
+    "img": "https://via.placeholder.com/400/956/fff/?text=Assistia",
+    "date_create": "2020-12-10 08:06:36"
+  },
+  {
+    "id": 18,
+    "user_id": 7,
+    "name": "Emtrac",
+    "type": "fox",
+    "breed": "arctic fox",
+    "description": "Elit et ullamco reprehenderit in qui est veniam exercitation nulla aliqua anim. Minim ex ut aliqua enim aliqua elit eiusmod non. Nisi excepteur Lorem minim enim commodo.",
+    "img": "https://via.placeholder.com/400/720/fff/?text=Emtrac",
+    "date_create": "2020-09-16 08:42:09"
+  },
+  {
+    "id": 19,
+    "user_id": 3,
+    "name": "Tubalum",
+    "type": "fox",
+    "breed": "red fox",
+    "description": "Ullamco deserunt laboris ullamco enim Lorem labore culpa velit. Ut id nostrud excepteur ex elit ex elit est quis quis deserunt fugiat. Ex ea ullamco tempor eiusmod velit irure id.",
+    "img": "https://via.placeholder.com/400/990/fff/?text=Tubalum",
+    "date_create": "2021-04-06 01:21:25"
+  },
+  {
+    "id": 20,
+    "user_id": 1,
+    "name": "Handshake",
+    "type": "fox",
+    "breed": "arctic fox",
+    "description": "Culpa exercitation occaecat esse veniam commodo ut pariatur incididunt et occaecat reprehenderit. Ut do ut sunt magna. Nostrud id magna anim cillum excepteur pariatur.",
+    "img": "https://via.placeholder.com/400/719/fff/?text=Handshake",
+    "date_create": "2020-08-23 03:13:23"
+  },
+  {
+    "id": 21,
+    "user_id": 3,
+    "name": "Multron",
+    "type": "fox",
+    "breed": "swift fox",
+    "description": "Nostrud cillum fugiat incididunt cupidatat aute ullamco. Ea voluptate non ad est do sit velit magna. Deserunt tempor et duis pariatur officia deserunt laborum proident.",
+    "img": "https://via.placeholder.com/400/887/fff/?text=Multron",
+    "date_create": "2020-02-13 04:56:09"
+  },
+  {
+    "id": 22,
+    "user_id": 4,
+    "name": "Bezal",
+    "type": "fox",
+    "breed": "red fox",
+    "description": "Ullamco eu sunt voluptate officia amet id elit. Occaecat sint ad excepteur aliquip ex exercitation eiusmod. Enim aliqua incididunt amet officia exercitation officia aliqua ullamco voluptate labore ad est nostrud ad.",
+    "img": "https://via.placeholder.com/400/950/fff/?text=Bezal",
+    "date_create": "2020-08-06 10:38:55"
+  },
+  {
+    "id": 23,
+    "user_id": 8,
+    "name": "Kneedles",
+    "type": "fox",
+    "breed": "swift fox",
+    "description": "Consequat duis excepteur sunt id incididunt. Nulla irure ut nisi velit ut. Reprehenderit sit voluptate eiusmod sit ex minim excepteur deserunt minim ipsum.",
+    "img": "https://via.placeholder.com/400/987/fff/?text=Kneedles",
+    "date_create": "2021-01-14 01:51:32"
+  },
+  {
+    "id": 24,
+    "user_id": 1,
+    "name": "Chillium",
+    "type": "fox",
+    "breed": "arctic fox",
+    "description": "Incididunt sit enim nisi occaecat Lorem. Anim mollit irure ipsum cupidatat ea duis mollit cillum nulla ipsum velit incididunt deserunt ex. Quis nulla id aliqua est ea ex.",
+    "img": "https://via.placeholder.com/400/823/fff/?text=Chillium",
+    "date_create": "2020-01-30 04:53:41"
+  },
+  {
+    "id": 25,
+    "user_id": 6,
+    "name": "Anixang",
+    "type": "fox",
+    "breed": "pale fox",
+    "description": "Incididunt magna ex occaecat ea id laboris adipisicing sint deserunt ea reprehenderit consequat. Cillum cillum officia ut et magna exercitation nisi proident fugiat. Deserunt ex deserunt consequat mollit sint officia aute est adipisicing laboris sunt dolor exercitation duis.",
+    "img": "https://via.placeholder.com/400/793/fff/?text=Anixang",
+    "date_create": "2020-11-20 04:12:22"
+  },
+  {
+    "id": 26,
+    "user_id": 10,
+    "name": "Ginkogene",
+    "type": "fox",
+    "breed": "swift fox",
+    "description": "Ut fugiat nulla dolore laborum est pariatur esse minim veniam velit in quis dolor proident. Duis sit laborum irure dolore sunt sit aute nisi duis. Nisi nulla veniam ea et ullamco reprehenderit reprehenderit anim consequat.",
+    "img": "https://via.placeholder.com/400/789/fff/?text=Ginkogene",
+    "date_create": "2020-03-22 03:15:25"
+  },
+  {
+    "id": 27,
+    "user_id": 2,
+    "name": "Boilicon",
+    "type": "fox",
+    "breed": "bengal fox",
+    "description": "Nisi ex eu ad consequat ipsum commodo quis fugiat esse incididunt esse eiusmod. Reprehenderit ullamco cillum id non nisi reprehenderit tempor tempor. Duis dolor consectetur cupidatat cillum deserunt laboris.",
+    "img": "https://via.placeholder.com/400/868/fff/?text=Boilicon",
+    "date_create": "2021-03-05 03:03:45"
+  },
+  {
+    "id": 28,
+    "user_id": 8,
+    "name": "Tetratrex",
+    "type": "fox",
+    "breed": "bengal fox",
+    "description": "Eu magna in voluptate ut commodo occaecat do in minim ullamco velit occaecat. Esse eu ut fugiat do ea pariatur est cillum qui esse exercitation adipisicing dolor ut. Exercitation fugiat sint veniam aute.",
+    "img": "https://via.placeholder.com/400/835/fff/?text=Tetratrex",
+    "date_create": "2020-06-30 09:10:33"
+  },
+  {
+    "id": 29,
+    "user_id": 10,
+    "name": "Minga",
+    "type": "fox",
+    "breed": "corsac fox",
+    "description": "Ut quis ea elit ut. Aliquip pariatur aliqua duis minim sit deserunt elit ea pariatur sint enim. Ipsum occaecat sunt voluptate consequat enim commodo magna id.",
+    "img": "https://via.placeholder.com/400/901/fff/?text=Minga",
+    "date_create": "2020-05-17 01:56:44"
+  },
+  {
+    "id": 30,
+    "user_id": 7,
+    "name": "Datagene",
+    "type": "fox",
+    "breed": "pale fox",
+    "description": "Consequat sunt et reprehenderit anim est sit officia veniam laborum incididunt do magna duis. Commodo quis consectetur culpa ad veniam aliqua deserunt anim commodo. Eiusmod dolor anim commodo do minim quis occaecat consequat duis.",
+    "img": "https://via.placeholder.com/400/738/fff/?text=Datagene",
+    "date_create": "2020-06-11 10:09:40"
+  },
+  {
+    "id": 31,
+    "user_id": 4,
+    "name": "Brainclip",
+    "type": "fox",
+    "breed": "bengal fox",
+    "description": "Fugiat elit occaecat dolore labore in sint aute commodo in tempor deserunt. Et ipsum velit nostrud officia ipsum ea adipisicing pariatur veniam quis. Minim laboris cupidatat quis laborum aute amet.",
+    "img": "https://via.placeholder.com/400/866/fff/?text=Brainclip",
+    "date_create": "2020-05-08 05:14:43"
+  },
+  {
+    "id": 32,
+    "user_id": 8,
+    "name": "Exostream",
+    "type": "fox",
+    "breed": "pale fox",
+    "description": "Aute non dolore commodo consectetur nostrud deserunt. Amet laborum duis eu aliquip ipsum velit. Voluptate pariatur est excepteur nostrud esse.",
+    "img": "https://via.placeholder.com/400/958/fff/?text=Exostream",
+    "date_create": "2020-09-30 12:51:33"
+  },
+  {
+    "id": 33,
+    "user_id": 6,
+    "name": "Zanity",
+    "type": "fox",
+    "breed": "cape fox",
+    "description": "Ut reprehenderit minim mollit sunt minim deserunt proident aute velit elit minim incididunt. In ipsum id labore ipsum nisi proident consectetur sit. Esse do et eiusmod exercitation.",
+    "img": "https://via.placeholder.com/400/877/fff/?text=Zanity",
+    "date_create": "2020-04-30 05:27:13"
+  },
+  {
+    "id": 34,
+    "user_id": 5,
+    "name": "Cincyr",
+    "type": "fox",
+    "breed": "pale fox",
+    "description": "Consequat aute sint nisi Lorem non sunt dolore cillum. Do dolore laboris sunt commodo esse ullamco est fugiat incididunt aliqua velit do nulla. Occaecat aliqua deserunt ex esse velit non cillum dolore qui enim mollit.",
+    "img": "https://via.placeholder.com/400/859/fff/?text=Cincyr",
+    "date_create": "2020-03-15 05:50:24"
+  },
+  {
+    "id": 35,
+    "user_id": 4,
+    "name": "Enersol",
+    "type": "fox",
+    "breed": "pale fox",
+    "description": "Sunt tempor minim ullamco quis aliquip magna officia id sunt dolore. Qui qui adipisicing consectetur consectetur cillum qui occaecat excepteur est labore officia nisi deserunt Lorem. Officia excepteur adipisicing proident anim.",
+    "img": "https://via.placeholder.com/400/973/fff/?text=Enersol",
+    "date_create": "2020-03-14 02:33:34"
+  },
+  {
+    "id": 36,
+    "user_id": 8,
+    "name": "Dreamia",
+    "type": "fox",
+    "breed": "cape fox",
+    "description": "Tempor sunt ex est fugiat minim anim excepteur enim sint pariatur cillum voluptate excepteur. Minim ullamco do consectetur dolore duis voluptate velit adipisicing amet consequat id. Nisi in excepteur proident do labore velit commodo aliquip nostrud esse.",
+    "img": "https://via.placeholder.com/400/969/fff/?text=Dreamia",
+    "date_create": "2021-02-10 04:49:44"
+  },
+  {
+    "id": 37,
+    "user_id": 7,
+    "name": "Fuelton",
+    "type": "fox",
+    "breed": "corsac fox",
+    "description": "Id deserunt sint eiusmod veniam enim id proident commodo esse. Sunt esse deserunt dolor aliqua et ut eu non aliqua elit. Excepteur et deserunt deserunt eu enim reprehenderit officia irure.",
+    "img": "https://via.placeholder.com/400/724/fff/?text=Fuelton",
+    "date_create": "2020-11-28 06:37:04"
+  },
+  {
+    "id": 38,
+    "user_id": 4,
+    "name": "Cubicide",
+    "type": "fox",
+    "breed": "corsac fox",
+    "description": "Enim esse pariatur id amet fugiat aliqua sit nisi labore magna consectetur. Magna magna veniam Lorem non cillum. Amet officia ullamco aliqua nostrud ea fugiat consectetur occaecat ad.",
+    "img": "https://via.placeholder.com/400/764/fff/?text=Cubicide",
+    "date_create": "2020-11-12 06:47:24"
+  },
+  {
+    "id": 39,
+    "user_id": 2,
+    "name": "Bitendrex",
+    "type": "fox",
+    "breed": "pale fox",
+    "description": "Laborum exercitation proident eiusmod non aute aute. In eu esse Lorem in. Elit exercitation enim adipisicing nostrud commodo aliquip ex proident esse.",
+    "img": "https://via.placeholder.com/400/739/fff/?text=Bitendrex",
+    "date_create": "2021-01-27 04:04:10"
+  },
+  {
+    "id": 40,
+    "user_id": 5,
+    "name": "Uncorp",
+    "type": "fox",
+    "breed": "bengal fox",
+    "description": "Sunt Lorem exercitation nulla et. Sit minim qui veniam ipsum quis officia. Cupidatat non incididunt do nisi pariatur ipsum.",
+    "img": "https://via.placeholder.com/400/810/fff/?text=Uncorp",
+    "date_create": "2020-02-25 12:21:42"
+  },
+  {
+    "id": 41,
+    "user_id": 1,
+    "name": "Xymonk",
+    "type": "fox",
+    "breed": "swift fox",
+    "description": "Enim amet exercitation laborum et duis minim tempor consectetur qui nisi adipisicing ut duis. Eiusmod quis nulla in est culpa nostrud. Velit duis nostrud sint est sit cupidatat esse qui officia mollit ea minim commodo.",
+    "img": "https://via.placeholder.com/400/797/fff/?text=Xymonk",
+    "date_create": "2020-07-04 03:09:51"
+  },
+  {
+    "id": 42,
+    "user_id": 8,
+    "name": "Kyaguru",
+    "type": "fox",
+    "breed": "corsac fox",
+    "description": "Reprehenderit reprehenderit sunt in nulla velit labore eu veniam cillum. Exercitation nulla laboris dolor et non magna non qui occaecat velit eiusmod non duis dolor. Reprehenderit sunt laboris do amet qui duis ex.",
+    "img": "https://via.placeholder.com/400/829/fff/?text=Kyaguru",
+    "date_create": "2020-04-10 04:27:48"
+  },
+  {
+    "id": 43,
+    "user_id": 4,
+    "name": "Exoplode",
+    "type": "fox",
+    "breed": "fennec fox",
+    "description": "Nulla nostrud adipisicing velit aliqua ea ea id est culpa cupidatat do aliqua. Irure excepteur ex deserunt aute aute ad ut. Nisi nostrud nostrud est occaecat.",
+    "img": "https://via.placeholder.com/400/846/fff/?text=Exoplode",
+    "date_create": "2020-05-27 11:51:02"
+  },
+  {
+    "id": 44,
+    "user_id": 5,
+    "name": "Twiist",
+    "type": "fox",
+    "breed": "pale fox",
+    "description": "Aliqua dolore ea enim consectetur veniam elit in cupidatat consequat reprehenderit cillum. Aute Lorem culpa esse exercitation. Ea commodo velit culpa aliqua dolor aliquip dolor.",
+    "img": "https://via.placeholder.com/400/850/fff/?text=Twiist",
+    "date_create": "2020-06-22 01:58:52"
+  },
+  {
+    "id": 45,
+    "user_id": 8,
+    "name": "Pivitol",
+    "type": "fox",
+    "breed": "corsac fox",
+    "description": "Proident pariatur laborum amet eiusmod cillum Lorem tempor quis incididunt aliqua aliquip commodo in labore. Excepteur aliquip laboris esse anim est amet elit qui ipsum. Nulla ea do ipsum sint.",
+    "img": "https://via.placeholder.com/400/770/fff/?text=Pivitol",
+    "date_create": "2021-03-25 08:33:57"
+  },
+  {
+    "id": 46,
+    "user_id": 3,
+    "name": "Hometown",
+    "type": "fox",
+    "breed": "fennec fox",
+    "description": "Nisi consectetur sit commodo consectetur sunt duis ex nostrud do. Dolore dolore consectetur elit exercitation sit excepteur deserunt anim pariatur. Eu dolor duis non officia velit Lorem.",
+    "img": "https://via.placeholder.com/400/889/fff/?text=Hometown",
+    "date_create": "2020-08-12 05:42:44"
+  },
+  {
+    "id": 47,
+    "user_id": 7,
+    "name": "Corporana",
+    "type": "fox",
+    "breed": "corsac fox",
+    "description": "Duis aute minim est aliquip labore adipisicing. Ipsum elit est excepteur ut minim magna reprehenderit in. Et cupidatat adipisicing eiusmod eu Lorem dolore pariatur occaecat minim occaecat.",
+    "img": "https://via.placeholder.com/400/993/fff/?text=Corporana",
+    "date_create": "2020-10-20 09:00:55"
+  },
+  {
+    "id": 48,
+    "user_id": 10,
+    "name": "Fiberox",
+    "type": "fox",
+    "breed": "bengal fox",
+    "description": "Excepteur voluptate reprehenderit tempor dolor commodo nisi eu pariatur ad pariatur duis. Ullamco irure id consequat Lorem non Lorem excepteur quis ex est pariatur enim. Est sint esse tempor dolore consequat dolore veniam.",
+    "img": "https://via.placeholder.com/400/956/fff/?text=Fiberox",
+    "date_create": "2020-10-03 08:21:55"
+  },
+  {
+    "id": 49,
+    "user_id": 1,
+    "name": "Zipak",
+    "type": "fox",
+    "breed": "pale fox",
+    "description": "Sit pariatur nostrud Lorem consectetur. Laboris laborum dolor commodo fugiat est id mollit. Sunt non laboris occaecat duis cillum enim exercitation do exercitation tempor qui.",
+    "img": "https://via.placeholder.com/400/997/fff/?text=Zipak",
+    "date_create": "2021-01-03 06:33:23"
+  },
+  {
+    "id": 50,
+    "user_id": 6,
+    "name": "Zoinage",
+    "type": "fox",
+    "breed": "swift fox",
+    "description": "Do ex ex occaecat ex ipsum dolor culpa ipsum non commodo. Quis non enim est consequat irure consectetur sunt in velit. Cupidatat ipsum officia exercitation occaecat anim consectetur exercitation consequat commodo est duis ullamco.",
+    "img": "https://via.placeholder.com/400/744/fff/?text=Zoinage",
+    "date_create": "2021-01-13 04:28:57"
+  }
+]
