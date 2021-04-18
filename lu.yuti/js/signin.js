@@ -1,23 +1,36 @@
-const checkSigninForm = () => {
-	let username = $("#signin-username").val();
-	let password = $("#signin-password").val();
-	
-	if(username=="user" && password=="pass") {
+
+const checkSigninForm = async () => {
+   let username = $("#signin-username").val();
+   let password = $("#signin-password").val();
+
+   if(username=='' || password=='') {
+      // warn that not all information is there
+      return;
+   }
+
+   let user = await query({
+      type:'check_signin',
+      params:[username,password]
+   });
+   console.log(user)
+   if(user.result.length > 0) {
       console.log("logged in")
-      sessionStorage.userId = 3;
+      sessionStorage.userId = user.result[0].id;
+
+      $("#signin-form")[0].reset();
    } else {
       console.log("logged out")
       sessionStorage.removeItem("userId");
    }
 
-    checkUserId();
+   checkUserId();
 }
 
 
 const checkUserId = () => {
    let p = ["#signin-page","#signup-page",""];
 
-    if(sessionStorage.userId === undefined) {
+   if(sessionStorage.userId === undefined) {
       // not logged in
       if(!p.some(o=>window.location.hash===o))
          $.mobile.navigate("#signin-page");
@@ -27,4 +40,3 @@ const checkUserId = () => {
          $.mobile.navigate("#recent-page");
    }
 }
-

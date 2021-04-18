@@ -5,7 +5,7 @@
 }
 
 :root {
-  --font-sans:Helvetica, Arial, sans-serif;
+  --font-sans:Avenir, Helvetica, Arial, sans-serif;
   --font-serif:Cambria, Georgia, serif;
 
 
@@ -20,7 +20,7 @@
   --color-white:#fdfdfd;
   --color-black:#0e0d0c;
 
-  --header-height:80px;
+  --header-height:60px;
   --footer-height:50px;
 }
 
@@ -75,7 +75,8 @@ a:hover {
   height:100%;
   width:100%;
 }
-
+.no-touch { pointer-events:none; }
+.do-touch { pointer-events:all; }
 
 
 
@@ -91,6 +92,7 @@ a:hover {
    width:100%;
    height:100%;
    overflow:hidden;
+   color: var(--color-black);
 }
 [data-role="main"] {
    flex: 1 1 100%;
@@ -147,7 +149,6 @@ a:hover {
 
 
 
-
 /* Navigation Elements */
 [data-role="header"] a,
 [data-role="footer"] a {
@@ -171,7 +172,24 @@ a:hover {
 [data-role="header"] a {
   padding: 0 1em;
 }
-
+.header a,
+[data-role="header"] a {
+  padding: 0 1em;
+}
+.header{
+  width:100%;
+  height: var(--header-height);
+  line-height: var(--header-height);
+}
+.header ul,
+[data-role="header"] ul,
+[data-role="footer"] ul {
+  list-style-type:none;
+  margin:0;
+  padding:0;
+  display:flex;
+  position:relative;
+}
 
 
 
@@ -352,6 +370,7 @@ a:hover {
 
 
 /* remove this later */
+.map,
 #recent-page [data-role='main'] {
   background-image: url('../img/googlemap.png');
   background-position:center;
@@ -494,7 +513,7 @@ a:hover {
 
 
 
-#list-page .animal-list{
+#list-page .animallist{
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -534,31 +553,6 @@ a:hover {
   /* margin: 14px 14px 0 0; */
 }
 
-
-#user-profile-page .photo{
-  margin-top: 32px;
-  width: 120px;
-  height: 120px;
-  border-radius: 60px;
-  /* background-color: #ececec; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 32px auto 20px auto;
-}
-
-#user-profile-page .user-name{
-  font-size: 16px;
-  font-weight: 700;
-  margin-bottom: 4px;
-  text-align: center;
-}
-#user-profile-page .user-email{
-    font-size: 14px;
-    font-weight: 300;
-    margin-bottom: 44px;
-    text-align: center;
-}
 #user-profile-page .my-animal-title{
   font-size: 24px;
   font-weight: 700;
@@ -686,9 +680,9 @@ a:hover {
 }
 
 /*ANIMAL PROFILE ADD PAGE*/
-#animal-profile-add-page .page-head{
+#animal-profile-add-page .animal-top{
   height: 240px;
-  border-radius: 0 0 10px 10px;
+  /* border-radius: 0 0 10px 10px; */
   background: #ececec;
   position: relative;
 }
@@ -753,12 +747,12 @@ a:hover {
 }
 
 /*ANIMAL PROFILE DATA PAGE*/
-#animal-profile-page .page-head{
+#animal-profile-page .animal-top{
   height: 240px;
-  border-radius: 0 0 10px 10px;
+  /* border-radius: 0 0 10px 10px; */
   background: #ececec;
   position: relative;
-  background-image: url('../img/amber-large.jpg');
+  /* background-image: url('../img/amber-large.jpg'); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -825,11 +819,142 @@ a:hover {
 #animal-profile-page .icon-edit{
   width: 24px; 
   height: 24px;
-  top: 16px;
+  top: 4px;
   right: 16px;
   position: absolute;
 }
 #animal-profile-page .icon-edit img{
   width: 24px; 
   height: 24px;
+}
+
+
+
+
+
+/*ANIMAL DATA PHP*/
+.animal-top {
+  flex:none;
+  height:40vh;
+  background-position:center;
+  background-size:cover;
+}
+.animal-bottom {
+  flex:1 1 100%;
+  position:relative;
+  overflow:hidden;
+}
+.animal-bottom-section {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  padding: 16px;
+}
+.animal-nav {
+  text-align:center;
+}
+.animal-nav li {
+  position:relative;
+}
+.animal-nav li a{
+  color: #767676;
+  font-weight: 400;
+  font-size: 1.2em;
+}
+.animal-nav .active a {
+  color: orange;
+  text-decoration: none;
+}
+.animal-nav .active::after {
+  content:'';
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:100%;
+  /* height:1px;
+  background-color: var(--color-main-medium); */
+}
+.animal-bottom-section {
+  display:none;
+}
+.animal-bottom-section.active {
+  display:block;
+}
+.animal-info .animal-info-row{
+  margin-bottom: 24px;
+}
+.animal-info .animal-info-row .animal-info-title{
+  font-size: 0.8em;
+  font-weight: 300;
+  color: #bfbfbf;
+  margin-bottom: 4px;
+}
+
+.animal-info .animal-info-row .animal-info-content{
+  font-size: 1.3em;
+  font-weight: 500;
+}
+
+
+.animallist {
+}
+.animallist-item {
+  font-weight:normal;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.animallist-item:not(:last-of-type) {
+  margin-bottom: 16px;
+}
+.animallist-image img{
+  width:100px;
+  height:100px;
+  vertical-align: middle;
+}
+.animallist-description{
+  padding: 16px;
+}
+.animallist-description .animallist-name {
+  font-size: 1.4em;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+.animallist-description .animallist-info{
+  font-size: 1em;
+  font-weight: 300;
+  color: #767676;
+}
+.animallist-description{
+
+}
+
+
+
+/*USER DATA PHP*/
+#user-profile-page .profile .user-profile-image img{
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px auto 20px auto;
+}
+#user-profile-page .profile .user-profile-name{
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  text-align: center;
+}
+#user-profile-page .profile .user-profile-email{
+  font-size: 14px;
+  font-weight: 300;
+  margin-bottom: 44px;
+  text-align: center;
 }

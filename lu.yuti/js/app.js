@@ -1,24 +1,53 @@
 // Document Ready
 $(()=>{
 
-	checkUserId();
+   checkUserId();
 
    $(document)
 
-   // FORM SUBMITS
+
+   .on("pagecontainerbeforeshow", function(event, ui) {
+      console.log(ui.toPage[0].id)
+
+      // PAGE ROUTING
+      switch(ui.toPage[0].id) {
+         case "recent-page": RecentPage(); break;
+         case "list-page": ListPage(); break;
+         case "user-profile-page": UserProfilePage(); break;
+         case "animal-profile-page": AnimalProfilePage(); break;
+      }
+   })
+
+   /* FORM SUBMITS */
    .on("submit","#signin-form",function(e){
       e.preventDefault();
       checkSigninForm();
    })
 
 
-	// ANCHOR CLICKS
-   .on("click",".js-logout",function(e){
+    /* ANCHOR CLICKS */
+    .on("click",".js-logout",function(e){
       sessionStorage.removeItem('userId');
       checkUserId();
    })
+   .on("click",".animal-jump",function(e){
+      sessionStorage.animalId = $(this).data('id');
+      $.mobile.navigate("#animal-profile-page")
+   })
+   .on("click",".animal-nav a",function(e){
+      let id = $(this).parent().index();
+      
+      $(this).parent().addClass("active")
+         .siblings().removeClass("active")
 
-   // DATA ACTIVATE
+      $(this)
+         .closest(".animal-nav").next().children().eq(id)
+         .addClass("active")
+         .siblings().removeClass("active")
+   })
+
+
+   /* DATA ACTIVATE */
    .on("click","[data-activate]",function(e){
       let target = $(this).data("activate");
       $(target).addClass("active");
@@ -47,5 +76,3 @@ $(()=>{
    })
 
 });
-
-
