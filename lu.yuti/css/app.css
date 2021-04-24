@@ -370,12 +370,14 @@ a:hover {
 
 
 /* remove this later */
-.map,
-#recent-page [data-role='main'] {
-  background-image: url('../img/googlemap.png');
-  background-position:center;
-  background-size:cover;
+.map {
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
 }
+
 
 
 
@@ -864,7 +866,7 @@ a:hover {
   font-size: 1.2em;
 }
 .animal-nav .active a {
-  color: orange;
+  color: var(--color-main-light);
   text-decoration: none;
 }
 .animal-nav .active::after {
@@ -898,8 +900,8 @@ a:hover {
 }
 
 
-.animallist {
-}
+/* .animallist {
+} */
 .animallist-item {
   font-weight:normal;
   border-radius: 10px;
@@ -930,9 +932,9 @@ a:hover {
   font-weight: 300;
   color: #767676;
 }
-.animallist-description{
+/* .animallist-description{
 
-}
+} */
 
 
 

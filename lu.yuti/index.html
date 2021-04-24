@@ -12,11 +12,17 @@
 
 	<script src="lib/js/jquery-2.2.4.min.js"></script>
   	<script src="js/signin.js"></script>
-	<script src="js/app.js"></script>
 	<script src="js/functions.js"></script>
 	<script src="js/pages.js"></script>
 	<script src="js/parts.js"></script>
+	<script src="js/maps.js"></script>
+	<script src="js/app.js"></script>
 	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
+	<script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApbjL6OVB23G7y-QdaG_UbYbMZz_Q8ryw&libraries=&v=weekly"
+      async
+    ></script>
+	
 </head>
 <body>
 
@@ -91,7 +97,8 @@
  
 	<section data-role="page" id="recent-page">
 	   	<div data-role="main"></div>
-	   		<div class="map-icon-test icon" style="position:absolute;left:45vw;top:42vh;font-size:2em" data-activate="#recent-test-modal">
+		   <div class="map"></div>
+	   		<!-- <div class="map-icon-test icon" style="position:absolute;left:45vw;top:42vh;font-size:2em" data-activate="#recent-test-modal">
 				<img src="img/pin.png" alt="">
 			</div>
 			<div class="modal" id="recent-test-modal">
@@ -99,7 +106,7 @@
 						<div class="modal-body">Amber</div>
 					</div>
 			 	</div>
-		  	</div>
+		  	</div> -->
 	   <footer data-role="footer" data-template="#footer-template"></footer>
 	</section>
  
