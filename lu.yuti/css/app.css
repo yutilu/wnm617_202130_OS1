@@ -207,7 +207,7 @@ a:hover {
 .form-input {
     width: 100%;
     display: inline-block;
-    border: 1px solid var(--color-balck);
+    border: 1px solid var(--color-black);
     margin: 0;
     padding: 0.5em 1em;
     border-radius: 0.3em;
@@ -362,6 +362,18 @@ a:hover {
 }
 
 
+.circle-button {
+  display:inline-block;
+  vertical-align:middle;
+  background-color:white;
+  box-shadow:2px 2px 5px rgba(0,0,0,0.2);
+  border-radius:50%;
+  height:var(--header-height);
+  line-height:var(--header-height);
+  width:var(--header-height);
+  text-align:center;
+  font-size:2em;
+}
 
 
 
@@ -515,6 +527,73 @@ a:hover {
 
 
 
+ #signup-second-page .logo{
+  height: 200px;
+  background-color: #FFF9F1;
+  clip-path: ellipse(600px 150px at 500px 50px);
+
+}
+#signup-second-page .logo img{
+  width: 55px;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+#signup-second-page .hello{
+  padding: 16px;
+}
+#signup-second-page .hello h1{
+  font-size: 32px;
+  margin: 32px 0 40px 0;
+}
+#signup-second-page .form-control{
+  margin: 0;
+  position: relative;
+}
+#signup-second-page .form-control .form-input{
+  border: 0;
+  border-bottom: 1px solid #424242;
+  border-radius: 0;
+  height: 30px;
+  padding: 0 0 0 40px;
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+#signup-second-page .form-control .form-input::placeholder{
+  color: #9f9f9f;
+}
+.prefix{
+  width: 24px;
+  height: 24px;
+}
+#signup-second-page .form-control .prefix{
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
+#signup-second-page .sign-up-button{
+  color: var(--color-white);
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  background: var(--color-main-dark);
+  margin: auto;
+  margin-bottom: 65px;
+  border: 0;
+}
+#signup-second-page .register{
+  text-align: center;
+  margin-bottom: 24px;
+}
+#signup-second-page .register span{
+  color: var(--color-main-dark);
+}
+
+
+
 #list-page .animallist{
   display: flex;
   justify-content: space-between;
@@ -551,7 +630,7 @@ a:hover {
 #list-page .icon-add img{
   width: 22px; 
   height: 22px;
-  margin-top: 28px;
+  margin-top: 18px;
   /* margin: 14px 14px 0 0; */
 }
 
@@ -626,7 +705,7 @@ a:hover {
 
 
 /*PROFILE EDIT PAGE*/
-#user-profile-edit-page .photo{
+#user-edit-page .photo{
   margin-top: 32px;
   width: 120px;
   height: 120px;
@@ -635,45 +714,58 @@ a:hover {
   align-items: center;
   margin: 32px auto 20px auto;
 }
-#user-profile-edit-page .page-content{
+#user-edit-page .page-content{
   padding: 0 16px;
 }
-#user-profile-edit-page .input-block{
+#user-edit-page .form-control{
   margin-bottom: 32px;
 }
-#user-profile-edit-page .input-block .ui-input-text{
+#user-edit-page .form-control .ui-input-text{
   border: 0;
 }
-#user-profile-edit-page .input-block label{
+#user-edit-page .form-control label{
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 16px;
 }
-#user-profile-edit-page .input-block input{
+#user-edit-page .form-control input{
   border: 0;
+  padding: 8px 0;
+  border-radius: 0;
   border-bottom: 1px solid #424242;
 }
-#user-profile-edit-page .btn-save{
+#user-edit-page .btn-group{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 16px;
+  width: 100%;
+}
+#user-edit-page .btn-group .btn-save{
   color: var(--color-white);
   border-radius: 10px;
-  width: 120px;
   height: 40px;
+  width: 120px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
+  font-weight: 500;
   background: var(--color-main-light);
-  margin: auto;
-  margin-bottom: 65px;
+  margin-bottom: 24px;
 }
-#user-profile-edit-page .btn-goback{
+#user-edit-page .btn-group .btn-changepassword{
+  font-weight: 400;
+  text-decoration: underline;
+  color: var(--color-main-light);
+}
+#user-edit-page .btn-goback{
   display: inline-block;
 }
-#user-profile-edit-page .btn-goback img{
+#user-edit-page .btn-goback img{
   width: 24px; height: 24px;
   margin: 16px 0 0 16px;
 }
-#user-profile-edit-page .change-photo{
+#user-edit-page .change-photo{
   color: #c66647;
   font-size: 14px;
   font-weight: 400;
@@ -681,60 +773,113 @@ a:hover {
   margin-bottom: 60px;
 }
 
+
+#user-password-page .btn-goback{
+  display: inline-block;
+}
+#user-password-page .btn-goback img{
+  width: 24px; height: 24px;
+  margin: 16px 0 0 16px;
+}
+#user-password-page .form-control{
+  margin-bottom: 32px;
+}
+#user-password-page .form-control .ui-input-text{
+  border: 0;
+}
+#user-password-page .form-control label{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+#user-password-page .form-control input{
+  border: 0;
+  padding: 8px 0;
+  border-radius: 0;
+  border-bottom: 1px solid #424242;
+}
+#user-password-page .form-control textarea{
+  height: 120px;
+  resize: none;
+}
+#user-password-page .form-control input::placeholder{
+  color: #9f9f9f;
+}
+#user-password-page .btn-save{
+  color: var(--color-white);
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  background: var(--color-main-light);
+  margin: auto;
+  margin-bottom: 20px;
+}
+
 /*ANIMAL PROFILE ADD PAGE*/
-#animal-profile-add-page .animal-top{
+#animal-edit-page .animal-top{
   height: 240px;
   /* border-radius: 0 0 10px 10px; */
   background: #ececec;
   position: relative;
 }
-#animal-profile-add-page .btn-goback{
+#animal-edit-page .btn-goback{
   display: inline-block;
 }
-#animal-profile-add-page .btn-goback img{
+#animal-edit-page .btn-goback img{
   width: 24px; height: 24px;
   margin: 16px 0 0 16px;
 }
-#animal-profile-add-page .upload-input{
+#animal-edit-page .upload-input{
   display: none;
 }
-#animal-profile-add-page .btn-upload{
+#animal-edit-page .btn-upload{
   width: 24px; height: 24px;
   position: absolute;
   right: 16px;
   bottom: 16px;
   padding: 2px;
 }
-#animal-profile-add-page .page-content{
+#animal-edit-page .page-content{
   padding: 0 16px;
 }
-#animal-profile-add-page .btn-delete{
+#animal-edit-page .btn-delete{
   width: 24px; height: 24px;
   margin: 24px 0;
   display: flex;
   justify-content: flex-end;
   width: 100%;
 }
-#animal-profile-add-page .input-block{
+#animal-edit-page .form-control{
   margin-bottom: 32px;
 }
-#animal-profile-add-page .input-block .ui-input-text{
+#animal-edit-page .form-control .ui-input-text{
   border: 0;
 }
-#animal-profile-add-page .input-block label{
+#animal-edit-page .form-control label{
   font-size: 18px;
   font-weight: 700;
   margin-bottom: 16px;
 }
 
-#animal-profile-add-page .input-block input{
+#animal-edit-page .form-control input{
   border: 0;
+  padding: 8px 0;
+  border-radius: 0;
   border-bottom: 1px solid #424242;
 }
-#animal-profile-add-page .input-block input::placeholder{
+#animal-edit-page .form-control textarea{
+  height: 120px;
+  resize: none;
+}
+#animal-edit-page .form-control input::placeholder{
   color: #9f9f9f;
 }
-#animal-profile-add-page .btn-save{
+#animal-edit-page .btn-save{
   color: var(--color-white);
   border-radius: 10px;
   width: 120px;
@@ -747,6 +892,12 @@ a:hover {
   margin: auto;
   margin-bottom: 65px;
 }
+
+
+
+
+
+
 
 /*ANIMAL PROFILE DATA PAGE*/
 #animal-profile-page .animal-top{
@@ -932,6 +1083,17 @@ a:hover {
   font-weight: 300;
   color: #767676;
 }
+
+.animal-image-thumb img {
+  width:6em;
+  height:6em;
+  vertical-align: middle;
+}
+
+.animal-jump * {
+  pointer-events:none;
+}
+
 /* .animallist-description{
 
 } */

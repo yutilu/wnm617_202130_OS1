@@ -9,12 +9,17 @@ $(()=>{
    .on("pagecontainerbeforeshow", function(event, ui) {
       console.log(ui.toPage[0].id)
 
+      $(".active").removeClass("active")
       // PAGE ROUTING
       switch(ui.toPage[0].id) {
          case "recent-page": RecentPage(); break;
          case "list-page": ListPage(); break;
          case "user-profile-page": UserProfilePage(); break;
+         case "user-edit-page": UserEditPage(); break;
+         case "user-password-page": UserPasswordPage(); break;
          case "animal-profile-page": AnimalProfilePage(); break;
+         case "animal-edit-page": AnimalEditPage(); break;
+         case "choose-location-page": ChooseLocationPage(); break;
       }
    })
 
