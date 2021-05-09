@@ -53,7 +53,7 @@ const ListPage = async () => {
 
    animal_template = animals.result.length?
       makeAnimalList(animals.result):
-      `<div class="animallist-item"><div class="animallist-description">No animals yet. Try adding some.</div></div>`
+      `<div class="animallist-item"><div class="animallist-description">No foxs yet. Try adding some.</div></div>`
 
    $("#list-page .animallist").html(animal_template);
 }
@@ -140,11 +140,44 @@ const AnimalEditPage = async () => {
          .html(makeAnimalProfileUpdateForm(animal.result[0]));
 }
 
+const AnimalAddPage = async () => {
+
+   $("#animal-add-form .form-elements")
+      .html(
+         makeAnimalProfileUpdateForm({
+            name:"",
+            type:"",
+            breed:"",
+            description:""
+         },"animal-add")
+      );
+}
 
 
 
 
+
+const ChooseAnimalPage = async () => {
+   let d = await query({
+      type:'animals_by_user_id',
+      params:[sessionStorage.userId]
+   });
+
+   $("#location-choose-animal")
+      .html(FormSelectOptions(d.result))
+}
 const ChooseLocationPage = async () => {
    let map_el = await makeMap("#choose-location-page .map");
    makeMarkers(map_el,[])
+
+   map_el.data("map").addListener("click",function(e){
+      console.log(e)
+      $("#location-lat").val(e.latLng.lat())
+      $("#location-lng").val(e.latLng.lng())
+      makeMarkers(map_el,[{
+         lat:e.latLng.lat(),
+         lng:e.latLng.lng(),
+         // icon:
+      }])
+   })
 }

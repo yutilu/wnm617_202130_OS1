@@ -19,19 +19,30 @@ $(()=>{
          case "user-password-page": UserPasswordPage(); break;
          case "animal-profile-page": AnimalProfilePage(); break;
          case "animal-edit-page": AnimalEditPage(); break;
+         case "animal-add-page": AnimalAddPage(); break;
+         case "choose-animal-page": ChooseAnimalPage(); break;
          case "choose-location-page": ChooseLocationPage(); break;
       }
    })
 
-   /* FORM SUBMITS */
-   .on("submit","#signin-form",function(e){
+    /* FORM SUBMITS */
+    .on("submit","#signin-form",function(e){
       e.preventDefault();
       checkSigninForm();
    })
+   .on("submit","#signup-form",function(e){
+      e.preventDefault();
+      checkSignupForm();
+   })
+   .on("submit","#signup-second-form",function(e){
+      e.preventDefault();
+      checkSignupSecondForm();
+   })
+
 
 
     /* ANCHOR CLICKS */
-    .on("click",".js-logout",function(e){
+   .on("click",".js-logout",function(e){
       sessionStorage.removeItem('userId');
       checkUserId();
    })
@@ -50,6 +61,30 @@ $(()=>{
          .addClass("active")
          .siblings().removeClass("active")
    })
+   .on("click",".js-choose-animal",function(e){
+      $("#location-choose-animal")
+         .html(FormSelectOptions([{id:sessionStorage.animalId,name:"chosen"}]))
+      $("#location-redirect").val(-2);
+   })
+   .on("click",".js-add-from-recent",function(e){
+      $("#location-redirect").val(-3);
+   })
+   .on("click",".animal-add-submit",function(e){
+      checkAnimalAddForm();
+   })
+   .on("click",".animal-edit-submit",function(e){
+      checkAnimalEditForm();
+   })
+   .on("click",".user-edit-submit",function(e){
+      checkUserEditForm();
+   })
+   .on("click",".user-password-submit",function(e){
+      checkUserPasswordForm();
+   })
+   .on("click",".location-add-submit",function(e){
+      checkLocationAddForm();
+   })
+
 
 
    /* DATA ACTIVATE */

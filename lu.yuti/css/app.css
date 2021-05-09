@@ -232,6 +232,33 @@ a:hover {
    background-color:var(--color-neutral-medium);
 }
 
+.form-select {
+  position: relative;
+}
+.form-select>select {
+  display:inline-block;
+  width:100%;
+  border-width:0;
+  background-color:var(--color-neutral-light);
+  padding:0.5em 2em 0.5em 1em;
+  border-radius:0.3em;
+  font:inherit;
+  outline:0;
+  position:relative;
+  overflow:hidden;
+  -webkit-appearance:none;
+}
+.form-select::after {
+  position:absolute;
+  top:50%;
+  right:0.5em;
+  content:'▼';
+  font-family:arial;
+  font-size:0.9em;
+  color:var(--color-neutral-dark);
+  pointer-events:none;
+  transform: translateY(-50%);
+}
 
 
 
@@ -457,6 +484,11 @@ a:hover {
 #signin-page .register span{
   color: var(--color-main-light);
 }
+#signin-page .error-message{
+  color: #ED6A65;
+  margin-bottom: 24px;
+  margin-top: -24px;
+}
 
 
 
@@ -524,6 +556,11 @@ a:hover {
  #signup-page .register span{
    color: var(--color-main-dark);
  }
+ #signup-page .error-message{
+  color: #ED6A65;
+  margin-bottom: 24px;
+  margin-top: -24px;
+}
 
 
 
@@ -697,7 +734,7 @@ a:hover {
   display: flex;
   justify-content: flex-end;
 }
-#user-profile-page .icon-logout img{
+#user-profile-page .js-logout img{
   width: 24px; 
   height: 24px;
   margin: 14px 14px 0 0;
@@ -880,6 +917,83 @@ a:hover {
   color: #9f9f9f;
 }
 #animal-edit-page .btn-save{
+  color: var(--color-white);
+  border-radius: 10px;
+  width: 120px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  background: var(--color-main-light);
+  margin: auto;
+  margin-bottom: 65px;
+}
+
+
+
+
+
+
+#animal-add-page .animal-top{
+  height: 240px;
+  /* border-radius: 0 0 10px 10px; */
+  background: #ececec;
+  position: relative;
+}
+#animal-add-page .btn-goback{
+  display: inline-block;
+}
+#animal-add-page .btn-goback img{
+  width: 24px; height: 24px;
+  margin: 16px 0 0 16px;
+}
+#animal-add-page .upload-input{
+  display: none;
+}
+#animal-add-page .btn-upload{
+  width: 24px; height: 24px;
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  padding: 2px;
+}
+#animal-add-page .page-content{
+  padding: 0 16px;
+}
+#animal-add-page .btn-delete{
+  width: 24px; height: 24px;
+  margin: 24px 0;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+#animal-add-page .form-control{
+  margin-bottom: 32px;
+}
+#animal-add-page .form-control .ui-input-text{
+  border: 0;
+}
+#animal-add-page .form-control label{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+#animal-add-page .form-control input{
+  border: 0;
+  padding: 8px 0;
+  border-radius: 0;
+  border-bottom: 1px solid #424242;
+}
+#animal-add-page .form-control textarea{
+  height: 120px;
+  resize: none;
+}
+#animal-add-page .form-control input::placeholder{
+  color: #9f9f9f;
+}
+#animal-add-page .btn-save{
   color: var(--color-white);
   border-radius: 10px;
   width: 120px;
@@ -1121,4 +1235,78 @@ a:hover {
   font-weight: 300;
   margin-bottom: 44px;
   text-align: center;
+}
+
+/*CHOOSE ANIMALS PAGE*/
+#choose-animal-page .btn-goback{
+  display: inline-block;
+}
+#choose-animal-page .btn-goback img{
+  width: 24px; height: 24px;
+  margin: 16px 0 0 16px;
+}
+
+#choose-animal-page .btn-gonext{
+  justify-content: flex-end;
+
+}
+#choose-animal-page .btn-gonext img{
+  width: 24px; height: 24px;
+  margin: 16px 16px 0 0;
+}
+#choose-animal-page .choose-animal-button{
+  width: calc(100% - 32px);
+  margin: 24px auto;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#choose-animal-page .btn-create-new-animal a{
+  background-color: var(--color-main-light);
+  color: #ffffff;
+}
+
+
+/*CHOOSE LOCATION PAGE*/
+#choose-location-page .btn-goback{
+  display: inline-block;
+}
+#choose-location-page .btn-goback img{
+  width: 24px; height: 24px;
+  margin: 16px 0 0 16px;
+}
+
+#choose-location-page .btn-gonext{
+  justify-content: flex-end;
+
+}
+#choose-location-page .btn-gonext img{
+  width: 24px; height: 24px;
+  margin: 16px 16px 0 0;
+}
+
+/*DESCRIBE ANIMAL PAGE*/
+
+#location-description-page .btn-group .btn-save{
+  color: var(--color-white);
+  border-radius: 10px;
+  height: 40px;
+  width: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  background: var(--color-main-light);
+  margin-bottom: 24px;
+}
+#location-description-page .btn-goback{
+  justify-content: flex-end;
+
+}
+#location-description-page .btn-goback img{
+  width: 24px; height: 24px;
+  margin: 16px 16px 0 0;
+}
+#location-description-page .btn-group{
+  display: flex;
+  justify-content: center;
 }

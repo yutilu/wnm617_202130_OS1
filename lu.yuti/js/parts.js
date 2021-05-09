@@ -80,94 +80,109 @@ const FormControlTextarea = ({namespace,name,displayname,type,placeholder,value}
 }
 
 
+const FormSelectOptions = (options,selected=1) => {
+   return options.reduce((r,o)=>{
+      return r+`<option value="${o.id}" ${o.id===selected?'selected':''}>${o.name}</option>`
+   },'');
+}
 
-const makeAnimalProfileUpdateForm = o => `
+const FormSelect = (options,id,selected=1) => {
+   return `<div class='form-select'>
+      <select id="${id}">
+         ${FormSelectOptions(options,selected)}
+      </select>
+   </div>`;
+}
+
+
+
+const makeAnimalProfileUpdateForm = (o,namespace="animal-edit") => `
 ${FormControlInput({
-   namespace:"animal-edit",
+   namespace:namespace,
    name:'name',
    displayname:'Name',
    type:'text',
-   placeholder:'Type The Animal Name',
+   placeholder:'Type the animal name',
    value:o.name
 })}
 ${FormControlInput({
-   namespace:"animal-edit",
+   namespace:namespace,
    name:'type',
    displayname:'Type',
    type:'text',
-   placeholder:'Type The Animal Type',
+   placeholder:'Type the animal type',
    value:o.type
 })}
 ${FormControlInput({
-   namespace:"animal-edit",
+   namespace:namespace,
    name:'breed',
    displayname:'Breed',
    type:'text',
-   placeholder:'Type The Animal Breed',
+   placeholder:'Type the animal breed',
    value:o.breed
 })}
 ${FormControlTextarea({
-   namespace:"animal-edit",
+   namespace:namespace,
    name:'description',
    displayname:'Description',
    type:'text',
-   placeholder:'Type The Animal Description',
+   placeholder:'Type the animal description',
    value:o.description
 })}
 `
 
 
 
-const makeUserProfileUpdateForm = o => `
+const makeUserProfileUpdateForm = (o,namespace="user-edit") => `
 ${FormControlInput({
-   namespace:"user-edit",
+   namespace:namespace,
    name:'name',
    displayname:'Name',
    type:'text',
-   placeholder:'Type Your Name',
+   placeholder:'Type your name',
    value:o.name
 })}
 ${FormControlInput({
-   namespace:"user-edit",
+   namespace:namespace,
    name:'username',
    displayname:'Username',
    type:'text',
-   placeholder:'Type Your Username',
+   placeholder:'Type your username',
    value:o.username
 })}
 ${FormControlInput({
-   namespace:"user-edit",
+   namespace:namespace,
    name:'email',
    displayname:'Email',
    type:'text',
-   placeholder:'Type Your Email',
+   placeholder:'Type your email',
    value:o.email
 })}
 `
 
 const makeUserPasswordUpdateForm = o => `
 ${FormControlInput({
-   namespace:"user-password",
+   namespace:"user-edit",
    name:'old-password',
    displayname:'Old Password',
    type:'password',
-   placeholder:'Type Your Old Password',
+   placeholder:'Type your old password',
    value:''
 })}
 ${FormControlInput({
-   namespace:"user-password",
+   namespace:"user-edit",
    name:'new-password',
    displayname:'New Password',
    type:'password',
-   placeholder:'Type Your New Password',
+   placeholder:'Type your new password',
    value:''
 })}
 ${FormControlInput({
-   namespace:"user-password",
+   namespace:"user-edit",
    name:'confirm-password',
    displayname:'Confirm Password',
    type:'password',
-   placeholder:'Type Your New Password Again',
+   placeholder:'Type your new password again',
    value:''
 })}
 `

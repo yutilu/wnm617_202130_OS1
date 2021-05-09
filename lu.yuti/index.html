@@ -17,6 +17,7 @@
 	<script src="js/parts.js"></script>
 	<script src="js/maps.js"></script>
 	<script src="js/app.js"></script>
+	<script src="js/forms.js"></script>
 	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 	<script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApbjL6OVB23G7y-QdaG_UbYbMZz_Q8ryw&libraries=&v=weekly"
@@ -46,6 +47,9 @@
 						<img class="prefix" src="img/pw.png" alt="">
 						<input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
 					</div>
+					<div class="form-control error-message">
+						<div id="signin-error-message"></div>
+					</div>
 					<div class="form-control">
 						<input type="submit" class="form-button sign-in-button" value="Login" data-role="none">
 					</div>
@@ -72,7 +76,7 @@
 				 <form class="form" id="signup-form" data-ajax="false" style="padding:1em">
 					<div class="form-control">
 						<img class="prefix" src="img/msg.png" alt="">
-						<input class="form-input" type="text" id="signup-useremail" data-role="none"  placeholder="Enter email address">
+						<input class="form-input" type="text" id="signup-email" data-role="none"  placeholder="Enter email address">
 					</div>
 					<div class="form-control">
 						<img class="prefix" src="img/pw.png" alt="">
@@ -82,8 +86,11 @@
 						<img class="prefix" src="img/pw.png" alt="">
 						<input class="form-input" type="password" id="signup-confirm" data-role="none" placeholder="Confirm password">
 					</div>
+					<div class="form-control error-message">
+						<div id="signup-error-message"></div>
+					</div>
 					<div class="form-control">
-						<a href='#signup-second-page' class="form-button sign-up-button"data-role="none">Sign up</a>
+						<input type="submit" class="form-button sign-up-button" value="Sign Up" data-role="none">
 					</div>
 				 </form>
 				 <div class="register">
@@ -104,21 +111,21 @@
 			   <div class="hello">
 				   <h1>Create an account<br/></h1>
 			   </div>
-			   <form class="form" id="signup-second-username" data-ajax="false" style="padding:1em">
+			   <form class="form" id="signup-second-form" data-ajax="false" style="padding:1em">
 				<div class="form-control">
 					<img class="prefix" src="img/user1.png" alt="">
-					<input class="form-input" type="text" id="signup-second-username" data-role="none"  placeholder="Choose a user name">
+					<input class="form-input" type="text" id="signup-second-username" data-role="none"  placeholder="Enter a user name">
 				</div>
 				<div class="form-control">
 					<img class="prefix" src="img/user1.png" alt="">
-					<input class="form-input" type="text" id="signup-second-firstname" data-role="none"  placeholder="First name">
+					<input class="form-input" type="text" id="signup-second-name" data-role="none"  placeholder="Enter your real name">
 				</div>
-				<div class="form-control">
+				<!-- <div class="form-control">
 					<img class="prefix" src="img/user1.png" alt="">
 					<input class="form-input" type="password" id="signup-second-lastname" data-role="none" placeholder="Last name">
-				</div>
+				</div> -->
 				<div class="form-control">
-					<a href='#recent-page' class="form-button sign-up-button"data-role="none">Finish Up</a>
+					<input type="submit" class="orm-button sign-up-button" value="Finish Up" data-role="none">
 				</div>
 			 </form>
 		   </div>
@@ -132,7 +139,7 @@
 	   	<div data-role="main">
 		   <div class="map"></div>
 				<div class="floater bottom right" style="padding:1em">
-            		<a href="#choose-animal-page" class="circle-button">&plus;</a>
+            		<a href="#choose-animal-page" class="circle-button js-add-from-recent">&plus;</a>
         		 </div>
 		
 
@@ -162,9 +169,10 @@
 			<ul>
 				<li class="flex-stretch"></li>
 				<li>
-					<a href="#animal-edit-page">
+					<a href="#animal-add-page">&plus;</a>
+					<!-- <a href="#animal-edit-page">
 						<div class="icon-add"><img src="img/plus.png" alt=""></div>
-					</a>
+					</a> -->
 				</li>
  			</ul>
 		</header>
@@ -191,11 +199,12 @@
 		<div data-role="main">
 			<div class="overscroll">
 				<div class="icon-container">
-					<a href="#signin-page">
+					<a href="#" class="js-logout"><img src="img/logout.png" alt=""></a></li>
+					<!-- <a href="#signin-page">
 						<div class="icon-logout">
 							<img src="img/logout.png" alt="">
 						</div>
-					</a>
+					</a> -->
 				</div>
 				<div class="profile"></div>
 				<div class="my-animal-title">My Favorite Fox</div>
@@ -217,7 +226,7 @@
 		<div data-role="main">
 			<div class="overscroll">
 				<div class="page-head">
-					<a href="#user-profile-page"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
+					<a href="#" data-rel="back"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
 				</div>
 				<div class="photo"><img src="img/userimg.png" alt=""></div>   
 				<div class="change-photo-content">
@@ -239,7 +248,7 @@
 					</div>
 				</div> -->
 				<div class="btn-group">
-					<a href="#user-profile-page" class="btn-save"><div>Save</div></a>
+					<a href="#" class="user-edit-submit btn-save"><div>Save</div></a>
 					<a href="#user-password-page" class="btn-changepassword"><div>Chenge Password</div></a>
 				</div>
 			</div>
@@ -262,23 +271,23 @@
 		<div data-role="main">
 			<div class="overscroll">
 				<div class="page-head">
-					<a href="#user-edit-page"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
+					<a href="#" data-rel="back"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
 				</div>
 			  <form id="user-password-form" data-ajax="false" style="padding:1em"></form>
-			  <a href="#user-edit-page"><div class="btn-save">Save</div></a>
+			  <a href="#" class="user-password-submit"><div class="btn-save">Save</div></a>
 		   </div>
 		</div>
 	 </section>
 
  
  
-	<!--  ANIMAL ADD SECTION -->
+	<!--  ANIMAL EDIT SECTION -->
  
 	<section data-role="page" id="animal-edit-page">
 	   <div data-role="main">
 		<div class="overscroll">
 			<div class="animal-top">
-				<a href="#list-page"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
+				<a href="#" data-rel="back"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
 				<input type="file" id="upload-photo" class="upload-input" data-role="none">
 				<img src="img/upload.svg" class="btn-upload">
 			</div>
@@ -301,11 +310,31 @@
 					<label for="">Description</label>
 					<input type="text" placeholder='Description'>
 				</div> -->
-				<a href="#list-page"><div class="btn-save">Save</div></a>
+				<a href="#" class="animal-edit-submit"><div class="btn-save">Save</div></a>
 				</div>
 	   		</div>
 	   </div>
 	</section>
+
+	<!--  ANIMAL ADD SECTION -->
+	<section data-role="page" id="animal-add-page">
+		<div data-role="main">
+		 <div class="overscroll">
+			 <div class="animal-top">
+				 <a href="#" data-rel="back"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
+				 <input type="file" id="upload-photo" class="upload-input" data-role="none">
+				 <img src="img/upload.svg" class="btn-upload">
+			 </div>
+			 <div class="page-content">
+				 <div class="btn-delete"><img src="img/delete.png" alt=""></div>
+				 <form id="animal-add-form" data-ajax="false" style="padding:1em">
+					<input type='hidden' id='animal-add-location'>
+               			<div class="form-elements"></div>
+				 <a href="#" class= "animal-add-submit"><div class="btn-save">Save</div></a>
+				 </div>
+				</div>
+		</div>
+	 </section>
 
 
 	<!--  ANIMAL DATA SECTION -->
@@ -336,7 +365,7 @@
 				<div class="animal-bottom-section animal-map">
 					<div class="map"></div>
 					<div class="floater bottom right" style="padding:1em">
-						<a href="#choose-location-page" class="circle-button">&plus;</a>
+						<a href="#choose-location-page" class="circle-button js-choose-animal">&plus;</a>
 					 </div>
 				</div>
 				<div class="animal-bottom-section animal-info"></div>
@@ -350,18 +379,25 @@
 	<!-- CHOOSE LOCATION PAGES -->
 	<section data-role="page" id="choose-animal-page">
 		<header data-role="header">
-		   <h1>Choose Animal</h1>
+		   <h1>Choose animal</h1>
 		   <ul>
-			  <li><a href="#" data-rel="back">Cancel</a></li>
+			  <li><a href="#" data-rel="back"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a></li>
 			  <li class="flex-stretch"></li>
-			  <li><a href="#choose-location-page">Next</a></li>
+			  <li><a href="#choose-location-page"><div class="btn-gonext"><img src="img/gonext.png" alt=""></div></a></li>
 		   </ul>
 		</header>
 		<div data-role="main" class="display-flex flex-vertical">
 		   <div class="overscroll">
-			  <form>
-				 <div>Create New Animal</div>
-				 <div>Choose Animal</div>
+			  <form style="padding:1em">
+				 <div class="choose-animal-button btn-create-new-animal">
+					 <a href="#animal-add-page" class="form-button">Create new animal</a>
+				</div>
+				 <p style="text-align:center">Or Choose One Below</p>
+				 <div class="choose-animal-button btn-choose-new-animal">
+					<div class='form-select'>
+					   <select id="location-choose-animal" data-role="none"></select>
+					</div>
+				 </div>
 			  </form>
 		   </div>
 		</div>
@@ -369,34 +405,39 @@
   
 	 <section data-role="page" id="choose-location-page">
 		<header data-role="header">
-		   <h1>Choose Location</h1>
-		   <ul>
-			  <li><a href="#" data-rel="back">Back</a></li>
-			  <li class="flex-stretch"></li>
-			  <li><a href="#location-description-page">Next</a></li>
-		   </ul>
+		   <h1>Choose location</h1>
+		   	<ul>
+				<li><a href="#" data-rel="back"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a></li>
+				<li class="flex-stretch"></li>
+				<li><a href="#location-description-page"><div class="btn-gonext"><img src="img/gonext.png" alt=""></div></a></li>
+		 	</ul>
 		</header>
-		<div data-role="main" class="display-flex flex-vertical">
-		   <div class="map"></div>
+			<div data-role="main" class="display-flex flex-vertical">
+				<input type="hidden" id="location-lat">
+         		<input type="hidden" id="location-lng">
+			<div class="map"></div>
 		</div>
 	 </section>
   
 	 <section data-role="page" id="location-description-page">
 		<header data-role="header">
-		   <h1>Describe Animal</h1>
+		   <h1>Describe animal</h1>
 		   <ul>
-			  <li><a href="#" data-rel="back">Back</a></li>
-			  <li class="flex-stretch"></li>
-			  <li><a href="#" class="js-add-location">Save</a></li>
-		   </ul>
+			<li><a href="#" data-rel="back"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a></li>
+			<li class="flex-stretch"></li>
+			<!-- <li><a href="#" class="location-add-submit">Save</a></li> -->
+		 </ul>
 		</header>
 
 		<div data-role="main" class="display-flex flex-vertical">
 		   <div class="overscroll">
 			  <form style="padding:1em">
-				<div>Location Description</div>
-				 <div class="form-control">
-					<textarea name="location-description" id="location-description" rows="10" class="form-input" data-role="none"></textarea>
+				<input type="hidden" id="location-redirect">
+				<div class="form-control">
+				   <textarea name="location-description" id="location-description" rows="10" class="form-input" data-role="none"></textarea>
+				</div>
+				 <div class="btn-group">
+					<a href="#" class="location-add-submit"><div class="btn-save">Save</div></a>
 				 </div>
 			  </form>
 		   </div>
