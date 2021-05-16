@@ -52,6 +52,7 @@ const makeAnimalInfo = o => `
          ${o.breed}
       </div>
    </div>
+   <button class="form-button animal-delete" data-id="${o.id}">Delete</button>
 `;
 
 
@@ -169,7 +170,7 @@ const makeUserPasswordUpdateForm = o => `
 ${FormControlInput({
    namespace:"user-edit",
    name:'old-password',
-   displayname:'Old Password',
+   displayname:'Old password',
    type:'password',
    placeholder:'Type your old password',
    value:''
@@ -177,7 +178,7 @@ ${FormControlInput({
 ${FormControlInput({
    namespace:"user-edit",
    name:'new-password',
-   displayname:'New Password',
+   displayname:'New password',
    type:'password',
    placeholder:'Type your new password',
    value:''
@@ -185,7 +186,7 @@ ${FormControlInput({
 ${FormControlInput({
    namespace:"user-edit",
    name:'confirm-password',
-   displayname:'Confirm Password',
+   displayname:'Confirm password',
    type:'password',
    placeholder:'Type your new password again',
    value:''
