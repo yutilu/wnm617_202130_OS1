@@ -17,6 +17,7 @@ $(()=>{
          case "user-profile-page": UserProfilePage(); break;
          case "user-edit-page": UserEditPage(); break;
          case "user-password-page": UserPasswordPage(); break;
+         case "user-upload-page": UserUploadPage(); break;
          case "animal-profile-page": AnimalProfilePage(); break;
          case "animal-edit-page": AnimalEditPage(); break;
          case "animal-add-page": AnimalAddPage(); break;
@@ -37,6 +38,25 @@ $(()=>{
    .on("submit","#signup-second-form",function(e){
       e.preventDefault();
       checkSignupSecondForm();
+   })
+   .on("submit","#list-search",function(e){
+      e.preventDefault();
+      checkSearchForm();
+   })
+   .on("submit","#recent-search",function(e){
+      e.preventDefault();
+      checkRecentSearchForm();
+   })
+
+   .on("change",".image-uploader input",function(e){
+      checkUpload(this.files[0])
+      .then(d=>{
+         console.log(d)
+         $(".upload-image-input").val('uploads/'+d.result);
+         $(".image-uploader").css({
+            "background-image":`url(uploads/${d.result})`
+         });
+      })
    })
 
 
@@ -78,12 +98,22 @@ $(()=>{
    .on("click",".user-edit-submit",function(e){
       checkUserEditForm();
    })
+   .on("click",".user-upload-submit",function(e){
+      checkUserUploadForm();
+   })
    .on("click",".user-password-submit",function(e){
       checkUserPasswordForm();
    })
    .on("click",".location-add-submit",function(e){
       checkLocationAddForm();
    })
+   .on("click",".animal-delete",function(e){
+      checkAnimalDelete($(this).data('id'));
+   })
+   .on("click",".filter",function(e){
+      checkListFilter($(this).data());
+   })
+
 
 
 

@@ -18,12 +18,12 @@
 	<script src="js/maps.js"></script>
 	<script src="js/app.js"></script>
 	<script src="js/forms.js"></script>
-	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 	<script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApbjL6OVB23G7y-QdaG_UbYbMZz_Q8ryw&libraries=&v=weekly"
       async
     ></script>
 	
+	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
 
@@ -141,7 +141,12 @@
 				<div class="floater bottom right" style="padding:1em">
             		<a href="#choose-animal-page" class="circle-button js-add-from-recent">&plus;</a>
         		 </div>
-		
+				 
+				 <div class="floater top left" style="width:100%;padding:1em">
+					<form data-ajax="false" id="recent-search" class="hotdog hovering">
+					   <input type="search" id="recent-search-value" data-role="none" placeholder="Search">
+					</form>
+				 </div>
 
 			<div class="modal" id="recent-drawer">
             	<div class="modal-drawer modal-card top">
@@ -167,7 +172,8 @@
 		<header data-role="header">
 			<h1>Fox list</h1>
 			<ul>
-				<li class="flex-stretch"></li>
+				<li class="flex-stretch" style="padding-left:0.5em">
+				</li>
 				<li>
 					<a href="#animal-add-page">&plus;</a>
 					<!-- <a href="#animal-edit-page">
@@ -178,17 +184,47 @@
 		</header>
 		<div data-role="main">
 			<div class="overscroll">
+				
+				<form data-ajax="false" id="list-search" class="hotdog">
+					<input type="search" id="list-search-value" data-role="none" placeholder="Search">
+				 </form>
+
+				 <div data-role="header">
+					<ul class="filter-set"></ul>
+				 </div>
+
 				<div class="animallist"></div>
 			</div>
 		</div>
 		<footer data-role="footer" data-template="#footer-template"></footer>
 
 		<!-- *Note Popup -->
-		<div class="modal" id="list-add-modal">
+		<!-- <div class="modal" id="list-add-modal">
 			<div class="modal-back" data-deactivate="#list-add-modal"></div>
 			<form class="modal-popup" data-ajax="false" id="list-add-form">
+			   <div class="modal-head">Head</div>
+			   <div class="modal-body">
+				  <div class="form-control">
+					 <label for="list-add-name" class="form-label">Name</label>
+					 <input class="form-input" type="text" id="list-add-name" data-role="none">
+				  </div>
+				  <div class="form-control">
+					 <label for="list-add-type" class="form-label">Type</label>
+					 <input class="form-input" type="text" id="list-add-type" data-role="none">
+				  </div>
+				  <div class="form-control">
+					 <label for="list-add-breed" class="form-label">Breed</label>
+					 <input class="form-input" type="text" id="list-add-breed" data-role="none">
+				  </div>
+			   </div>
+			   <div class="modal-foot display-flex">
+				  <div class="flex-stretch"></div>
+				  <div class="flex-none">
+					 <a href="#" data-deactivate="#list-add-modal">Submit</a>
+				  </div>
+			   </div>
 			</form>
-		 </div>
+		 </div> -->
 	</section>
  
  
@@ -207,6 +243,11 @@
 					</a> -->
 				</div>
 				<div class="profile"></div>
+
+				<div class="floater bottom right">
+					<a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/changeimg" alt=""></a>
+				 </div>
+
 				<div class="my-animal-title">My Favorite Fox</div>
 				<div class="my-animal">
 					<div class="single-image"><img src="img/amber.png" alt=""></div>
@@ -279,8 +320,71 @@
 		</div>
 	 </section>
 
+	<!-- USER PROFILE UPLOAD IMAGE -->
+	 <section data-role="page" id="user-upload-page">
+		<header data-role="header">
+		   <h1>Upload photo</h1>
+		   <ul>
+			  <li><a href="#" data-rel="back">Cancel</a></li>
+			  <li class="flex-stretch"></li>
+			  <li><a href="#" class="user-upload-submit">Save</a></li>
+		   </ul>
+		</header>
+		<div data-role="main" class="display-flex flex-vertical">
+		   <div class="overscroll">
+			  <form id="user-upload-form" data-ajax="false" style="padding:1em">
+				 <input type="hidden" class="upload-image-input" id="user-upload-image">
+				 <label class="image-uploader full">
+					<input type="file" data-role="none" id="user-upload-input">
+				 </label>
+				 <label for="user-upload-input" class="floater bottom left">
+					<img src="img/uploadimg.png" alt="" class="icon">
+				 </label>
+			  </form>
+		   </div>
+		</div>
+	 </section>
  
+
+	<!--  ANIMAL DATA SECTION -->
  
+	<section data-role="page" id="animal-profile-page">
+		<div data-role="main" class="display-flex flex-vertical">
+			<div class="animal-top">
+				<div class="floater top left header">
+					<a href="#list-page">
+						<div class="btn-goback">
+							<img src="img/goback-w.png" alt="">
+						</div>
+					</a>
+					<a href="#animal-edit-page">
+						<div class="flex-none icon-edit">
+							<img src="img/edit-w.png" alt="">
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="header animal-nav">
+				<ul>
+				   	<li class="flex-stretch"><a href="#">Map</a></li>
+				   	<li class="flex-stretch"><a href="#">Info</a></li>
+				</ul>
+			</div>
+			<div class="animal-bottom">
+				<div class="animal-bottom-section animal-map">
+					<div class="map"></div>
+					<div class="floater bottom right" style="padding:1em">
+						<a href="#choose-location-page" class="circle-button js-choose-animal">&plus;</a>
+					 </div>
+				</div>
+				<div class="animal-bottom-section animal-info"></div>
+			</div>
+
+			 <div class="page-content"></div>
+		</div>
+	 </section>
+
+
 	<!--  ANIMAL EDIT SECTION -->
  
 	<section data-role="page" id="animal-edit-page">
@@ -336,44 +440,6 @@
 		</div>
 	 </section>
 
-
-	<!--  ANIMAL DATA SECTION -->
- 
-	<section data-role="page" id="animal-profile-page">
-		<div data-role="main" class="display-flex flex-vertical">
-			<div class="animal-top">
-				<div class="floater top left header">
-					<a href="#list-page">
-						<div class="btn-goback">
-							<img src="img/goback-w.png" alt="">
-						</div>
-					</a>
-					<a href="#animal-edit-page">
-						<div class="flex-none icon-edit">
-							<img src="img/edit-w.png" alt="">
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="header animal-nav">
-				<ul>
-				   	<li class="flex-stretch"><a href="#">Map</a></li>
-				   	<li class="flex-stretch"><a href="#">Info</a></li>
-				</ul>
-			</div>
-			<div class="animal-bottom">
-				<div class="animal-bottom-section animal-map">
-					<div class="map"></div>
-					<div class="floater bottom right" style="padding:1em">
-						<a href="#choose-location-page" class="circle-button js-choose-animal">&plus;</a>
-					 </div>
-				</div>
-				<div class="animal-bottom-section animal-info"></div>
-			</div>
-
-			 <div class="page-content"></div>
-		</div>
-	 </section>
  
 
 	<!-- CHOOSE LOCATION PAGES -->

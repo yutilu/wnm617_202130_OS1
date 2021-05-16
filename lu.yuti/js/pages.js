@@ -51,11 +51,12 @@ const ListPage = async () => {
 
    console.log(animals)
 
-   animal_template = animals.result.length?
-      makeAnimalList(animals.result):
-      `<div class="animallist-item"><div class="animallist-description">No foxs yet. Try adding some.</div></div>`
+   $(".filter-set").html(makeFilterList(animals.result))
 
-   $("#list-page .animallist").html(animal_template);
+   makeAnimalListSet(
+      animals.result,
+      "No animals yet. Try adding some."
+   );
 }
 
 
@@ -92,6 +93,18 @@ const UserPasswordPage = async () => {
 
    $("#user-password-form")
          .html(makeUserPasswordUpdateForm(user.result[0]));
+}
+
+const UserUploadPage = async () => {
+   let user = await query({
+      type:'user_by_id',
+      params:[sessionStorage.userId]
+   });
+
+   $("#user-upload-image").val(user.result[0].img);
+   $(".image-uploader").css({
+      "background-image":`url(${user.result[0].img})`
+   });
 }
 
 
