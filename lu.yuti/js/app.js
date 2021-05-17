@@ -59,16 +59,26 @@ $(()=>{
       })
    })
 
-   .on("change",".animal-image-uploader input",function(e){
+   .on("change","#animal-update-image-input",function(e){
       checkUpload(this.files[0])
       .then(d=>{
          console.log(d)
-         $(".animal-upload-image-input").val('uploads/'+d.result);
-         $(".animal-image-uploader").css({
-            "background-image":`url(uploads/${d.result})`
-         });
+         if(d.error) throw "Uploading failed: "+d.error;
+
+         let image_location = 'uploads/'+d.result;
+         query({
+            type:'update_animal_image',
+            params:[image_location,sessionStorage.animalId]
+         }).then(d=>{
+            if(d.error) {
+               throw d.error;
+            }
+            $("#animal-profile-page .animal-top")
+               .css({"background-image":`url(${image_location})`})
+         })
       })
    })
+
 
 
 

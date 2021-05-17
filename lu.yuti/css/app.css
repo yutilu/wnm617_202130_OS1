@@ -1220,8 +1220,7 @@ a:hover {
 }
 
 
-/* .animallist {
-} */
+/* Animallist */
 .animallist-item {
   font-weight:normal;
   border-radius: 10px;
@@ -1238,6 +1237,7 @@ a:hover {
   width:100px;
   height:100px;
   vertical-align: middle;
+  object-fit:cover;
 }
 .animallist-description{
   padding: 16px;
