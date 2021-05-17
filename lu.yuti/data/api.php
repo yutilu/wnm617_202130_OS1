@@ -209,6 +209,7 @@ function makeStatement($data) {
             WHERE `id` = ?
             ",$p,false);
          return ["result"=>"success"];
+         // return ["result"=>"success","output"=>$r];
 
       case "update_animal_image":
          $r = makeQuery($c,"UPDATE

@@ -735,7 +735,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   padding: 0 16px;
 }
 #user-profile-page .my-animal .single-image{
@@ -764,7 +764,7 @@ a:hover {
   font-weight: 700;
   background: var(--color-main-light);
   margin: auto;
-  margin-bottom: 65px;
+  margin-bottom: 80px;
 }
 #user-profile-page .page-content{
   padding: 0 16px;
@@ -848,6 +848,7 @@ a:hover {
   font-weight: 400;
   text-decoration: underline;
   color: var(--color-main-light);
+  margin-bottom: 40px;
 }
 #user-edit-page .btn-goback{
   display: inline-block;
@@ -923,7 +924,7 @@ a:hover {
 }
 #animal-edit-page .btn-goback img{
   width: 24px; height: 24px;
-  margin: 16px 0 0 16px;
+  margin: 16px 0 0 0;
 }
 #animal-edit-page .upload-input{
   display: none;
@@ -1000,7 +1001,7 @@ a:hover {
 }
 #animal-add-page .btn-goback img{
   width: 24px; height: 24px;
-  margin: 16px 0 0 16px;
+  margin: 16px 0 0 0;
 }
 #animal-add-page .upload-input{
   display: none;
