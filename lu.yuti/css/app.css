@@ -1326,6 +1326,12 @@ a:hover {
   width: 70px;
   height: 70px;
 }
+/*animal upload page*/
+#animal-upload-page .display-flex .overscroll #animal-upload-form .upload_icon .icon{
+  width: 70px;
+  height: 70px;
+}
+
 /*CHOOSE ANIMALS PAGE*/
 #choose-animal-page .overscroll{
   display: flex;
@@ -1414,7 +1420,7 @@ a:hover {
 }
 
 /*IMAGE UPLOADER*/
-.image-uploader.full {
+.image-uploader.full, .animal-image-uploader.full {
   position:absolute;
   top:0;
   left:0;
@@ -1424,9 +1430,12 @@ a:hover {
   background-size:contain;
   background-repeat:no-repeat;
 }
-.image-uploader.full input{
+.image-uploader.full input, .animal-image-uploader.full input{
   display:none;
 }
+
+
+
 
 .filter-set {
   display: flex;

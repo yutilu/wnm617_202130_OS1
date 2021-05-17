@@ -101,15 +101,17 @@ const checkAnimalAddForm = () => {
       window.history.go(-1);
    })
 }
+
 const checkAnimalEditForm = () => {
    let name = $("#animal-edit-name").val();
    let type = $("#animal-edit-type").val();
    let breed = $("#animal-edit-breed").val();
    let description = $("#animal-edit-description").val();
+   let img = $("#animal-upload-input").val()
 
    query({
       type:"update_animal",
-      params:[name,type,breed,description,sessionStorage.animalId]
+      params:[name,type,breed,description,img,sessionStorage.animalId]
    }).then(d=>{
       if(d.error) {
          throw d.error;
@@ -118,6 +120,21 @@ const checkAnimalEditForm = () => {
    })
 }
 
+
+// const checkAnimalUploadForm = () => {
+//    let upload = $("update_animal_image").val();
+//    if(upload=="") return;
+
+//    query({
+//       type:'update_animal_image',
+//       params:[upload,sessionStorage.userId]
+//    }).then(d=>{
+//       if(d.error) {
+//          throw d.error;
+//       }
+//       window.history.go(-1);
+//    })
+// }
 
 
 
@@ -141,7 +158,6 @@ const checkLocationAddForm = () => {
 
 
 
-
 const checkUserUploadForm = () => {
    let upload = $("#user-upload-image").val();
    if(upload=="") return;
@@ -156,11 +172,6 @@ const checkUserUploadForm = () => {
       window.history.go(-1);
    })
 }
-
-
-
-
-
 
 const checkAnimalDelete = (id) => {
    query({

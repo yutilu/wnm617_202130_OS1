@@ -337,15 +337,15 @@
 		</header>
 		<div data-role="main" class="display-flex flex-vertical">
 		   <div class="overscroll">
-			  <form id="user-upload-form" data-ajax="false" style="padding:1em">
-				 <input type="hidden" class="upload-image-input" id="user-upload-image">
-				 <label class="image-uploader full">
-					<input type="file" data-role="none" id="user-upload-input">
-				 </label>
-				 <label for="user-upload-input" class="floater bottom left upload_icon">
-					<img src="img/uploadimg.png" alt="" class="icon">
-				 </label>
-			  </form>
+				<form id="user-upload-form" data-ajax="false" style="padding:1em">
+					<input type="hidden" class="upload-image-input" id="user-upload-image">
+					<label class="image-uploader full">
+						<input type="file" data-role="none" id="user-upload-input">
+					</label>
+					<label for="user-upload-input" class="floater bottom left upload_icon">
+						<img src="img/uploadimg.png" alt="" class="icon">
+					</label>
+				</form>
 		   </div>
 		</div>
 	 </section>
@@ -396,10 +396,21 @@
 	<section data-role="page" id="animal-edit-page">
 	   <div data-role="main">
 		<div class="overscroll">
-			<div class="animal-top">
+			<div class="animal-edit-page-header"></div>
 				<a href="#" data-rel="back"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
-				<input type="file" id="upload-photo" class="upload-input" data-role="none">
-				<a href="#animal-upload-page"><img src="img/changeimg.png" class="btn-upload"></a>
+			</div>
+			<div class="animal-top">
+				<!-- <input type="file" id="upload-photo" class="upload-input" data-role="none"> -->
+				<!-- <a href="#animal-upload-page"><img src="img/changeimg.png" class="btn-upload"></a> -->
+				<form id="animal-upload-form" data-ajax="false" style="padding:1em">
+					<input type="hidden" class="animal-upload-image-input" id="animal-upload-image">
+					<label class="animal-image-uploader full">
+						<input type="file" data-role="none" id="animal-upload-input">
+					</label>
+					<label for="animal-upload-input" class="floater bottom left upload_icon ">
+						<img src="img/changeimg.png" alt="" class="icon">
+					</label>
+				</form>
 			</div>
 			<div class="page-content">
 				<!-- <div class="btn-delete"><img src="img/delete.png" alt=""></div> -->
@@ -438,7 +449,7 @@
 				 <img src="img/changeimg.png" class="btn-upload">
 			 </div>
 			<div class="page-content">
-				<div class="btn-delete"><img src="img/delete.png" alt=""></div>
+				<!-- <div class="btn-delete"><img src="img/delete.png" alt=""></div> -->
 				<form id="animal-add-form" data-ajax="false" style="padding:1em">
 				<input type='hidden' id='animal-add-location'>
 					<div class="form-elements"></div>

@@ -59,6 +59,18 @@ $(()=>{
       })
    })
 
+   .on("change",".animal-image-uploader input",function(e){
+      checkUpload(this.files[0])
+      .then(d=>{
+         console.log(d)
+         $(".animal-upload-image-input").val('uploads/'+d.result);
+         $(".animal-image-uploader").css({
+            "background-image":`url(uploads/${d.result})`
+         });
+      })
+   })
+
+
 
 
     /* ANCHOR CLICKS */
