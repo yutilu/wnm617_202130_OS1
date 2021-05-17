@@ -107,7 +107,7 @@ const checkAnimalEditForm = () => {
    let type = $("#animal-edit-type").val();
    let breed = $("#animal-edit-breed").val();
    let description = $("#animal-edit-description").val();
-   let img = $("#animal-upload-input").val()
+   let img = $("#animal-edit-image-url").val()
 
    query({
       type:"update_animal",

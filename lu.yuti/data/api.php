@@ -204,7 +204,7 @@ function makeStatement($data) {
             `name` = ?,
             `type` = ?,
             `breed` = ?,
-            `description` = ?
+            `description` = ?,
             `img` = ?
             WHERE `id` = ?
             ",$p,false);

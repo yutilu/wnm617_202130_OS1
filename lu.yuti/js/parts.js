@@ -110,6 +110,7 @@ const FormSelect = (options,id,selected=1) => {
 
 
 const makeAnimalProfileUpdateForm = (o,namespace="animal-edit") => `
+<input type="hidden" id="${namespace}-image-url" value="${o.img}">
 ${FormControlInput({
    namespace:namespace,
    name:'name',
