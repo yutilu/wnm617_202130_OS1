@@ -239,7 +239,8 @@ a:hover {
   display:inline-block;
   width:100%;
   border-width:0;
-  background-color:var(--color-neutral-light);
+  border: 1px solid var(--color-black);
+  background: var(--color-white);
   padding:0.5em 2em 0.5em 1em;
   border-radius:0.3em;
   font:inherit;
@@ -259,14 +260,43 @@ a:hover {
   pointer-events:none;
   transform: translateY(-50%);
 }
+/* .hotdog {
+  display: relative;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  width: 90%;
+  left: 50%;
+  border-width: 0;
+  border-radius: 2em;
+}
+.hotdog>input {
+  flex: 1;
+  background-color: transparent;
+  border-width: 0;
+  line-height: 2.5;
+  padding: 0 1em;
+  outline: 0;
+  font-size: inherit;
+}
+.hotdog.hovering {
+  background-color:var(--color-white);
+  box-shadow:1px 0 5px rgba(0,0,0,0.2)
+} */
+
+.container{
+  padding:1em
+}
+
 .hotdog {
   display: inline-flex;
+  margin-top: 5px;
+  margin-bottom: 5px;
   width: 100%;
   border-width: 0;
-  background-color: var(--color-main-light);
+  background-color: var(--color-neutral-light);
   border-radius: 2em;
-  /* border-style: solid;
-  border-color: #c66647; */
 }
 .hotdog>input {
   flex: 1;
@@ -281,7 +311,6 @@ a:hover {
   background-color:var(--color-white);
   box-shadow:1px 0 5px rgba(0,0,0,0.2)
 }
-
 
 
 
@@ -425,11 +454,6 @@ a:hover {
 }
 
 
-
-
-
-
-
 /* remove this later */
 .map {
   position:absolute;
@@ -466,7 +490,7 @@ a:hover {
 }
 #signin-page .form-control .form-input{
   border: 0;
-  border-bottom: 1px solid #424242;
+  border-bottom: 1px solid var(--color-black);
   border-radius: 0;
   height: 30px;
   padding: 0 0 0 40px;
@@ -538,7 +562,7 @@ a:hover {
  }
  #signup-page .form-control .form-input{
    border: 0;
-   border-bottom: 1px solid #424242;
+   border-bottom: 1px solid var(--color-black);
    border-radius: 0;
    height: 30px;
    padding: 0 0 0 40px;
@@ -610,7 +634,7 @@ a:hover {
 }
 #signup-second-page .form-control .form-input{
   border: 0;
-  border-bottom: 1px solid #424242;
+  border-bottom: 1px solid var(--color-black);
   border-radius: 0;
   height: 30px;
   padding: 0 0 0 40px;
@@ -692,6 +716,14 @@ a:hover {
   margin-top: 18px;
   /* margin: 14px 14px 0 0; */
 }
+#list-page .filter-header{
+  flex: none;
+}
+#list-page #list-search{
+  width: calc(100% - 32px);
+  margin: 16px 16px 0 16px;
+}
+
 
 #user-profile-page .my-animal-title{
   font-size: 24px;
@@ -750,7 +782,7 @@ a:hover {
 }
 #user-profile-page .input-block input{
   border: 0;
-  border-bottom: 1px solid #424242;
+  border-bottom: 1px solid var(--color-black);
 }
 #user-profile-page .icon-container{
   display: flex;
@@ -791,7 +823,7 @@ a:hover {
   border: 0;
   padding: 8px 0;
   border-radius: 0;
-  border-bottom: 1px solid #424242;
+  border-bottom: 1px solid var(--color-black);
 }
 #user-edit-page .btn-group{
   display: flex;
@@ -856,7 +888,7 @@ a:hover {
   border: 0;
   padding: 8px 0;
   border-radius: 0;
-  border-bottom: 1px solid #424242;
+  border-bottom: 1px solid var(--color-black);
 }
 #user-password-page .form-control textarea{
   height: 120px;
@@ -929,7 +961,7 @@ a:hover {
   border: 0;
   padding: 8px 0;
   border-radius: 0;
-  border-bottom: 1px solid #424242;
+  border-bottom: 1px solid var(--color-black);
 }
 #animal-edit-page .form-control textarea{
   height: 120px;
@@ -1006,7 +1038,7 @@ a:hover {
   border: 0;
   padding: 8px 0;
   border-radius: 0;
-  border-bottom: 1px solid #424242;
+  border-bottom: 1px solid var(--color-black);
 }
 #animal-add-page .form-control textarea{
   height: 120px;
@@ -1051,7 +1083,7 @@ a:hover {
 }
 #animal-profile-page .btn-goback img{
   width: 24px; height: 24px;
-  margin: 16px 0 0 16px;
+  margin: 16px 0 0 0;
 }
 #animal-profile-page .upload-input{
   display: none;
@@ -1087,7 +1119,7 @@ a:hover {
 
 #animal-profile-page .input-block input{
   border: 0;
-  border-bottom: 1px solid #424242;
+  border-bottom: 1px solid var(--color-black);
 }
 #animal-profile-page .input-block input::placeholder{
   color: #9f9f9f;
@@ -1109,7 +1141,7 @@ a:hover {
   width: 24px; 
   height: 24px;
   top: 4.5px;
-  right: 28px;
+  right: 18px;
   position: absolute;
 }
 #animal-profile-page .icon-edit img{
@@ -1246,12 +1278,42 @@ a:hover {
   align-items: center;
   margin: 32px auto 20px auto;
 }
+
+#user-edit-page .profile .user-profile-image img{
+  width: 120px;
+  height: 120px;
+  border-radius: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 32px auto 20px auto;
+}
+
 #user-profile-page .profile .user-profile-name{
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 4px;
   text-align: center;
 }
+
+#user-profile-page .profile .change-photo-content .change-photo{
+  display: none;
+}
+
+#user-edit-page .profile .user-profile-name{
+  display: none;
+}
+
+#user-edit-page .profile .user-profile-email{
+  display: none;
+}
+
+#user-edit-page .profile .change-photo-content .change-photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 #user-profile-page .profile .user-profile-email{
   font-size: 14px;
   font-weight: 300;
@@ -1259,13 +1321,27 @@ a:hover {
   text-align: center;
 }
 
+/*user upload page*/
+#user-upload-page .display-flex .overscroll #user-upload-form .upload_icon .icon{
+  width: 70px;
+  height: 70px;
+}
 /*CHOOSE ANIMALS PAGE*/
+#choose-animal-page .overscroll{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#choose-animal-page .choose-animal-page-inner{
+  width: 100%;
+}
 #choose-animal-page .btn-goback{
   display: inline-block;
 }
 #choose-animal-page .btn-goback img{
   width: 24px; height: 24px;
-  margin: 16px 0 0 16px;
+  margin: 16px 0 0 0;
 }
 
 #choose-animal-page .btn-gonext{
@@ -1274,7 +1350,7 @@ a:hover {
 }
 #choose-animal-page .btn-gonext img{
   width: 24px; height: 24px;
-  margin: 16px 16px 0 0;
+  margin: 16px 0 0 0;
 }
 #choose-animal-page .choose-animal-button{
   width: calc(100% - 32px);
@@ -1287,6 +1363,10 @@ a:hover {
   color: #ffffff;
 }
 
+/* #choose-animal-page .display-flex .overscroll .choose-animal-div{
+  align-items: ;
+} */
+
 
 /*CHOOSE LOCATION PAGE*/
 #choose-location-page .btn-goback{
@@ -1294,7 +1374,7 @@ a:hover {
 }
 #choose-location-page .btn-goback img{
   width: 24px; height: 24px;
-  margin: 16px 0 0 16px;
+  margin: 16px 0 0 0;
 }
 
 #choose-location-page .btn-gonext{
@@ -1303,7 +1383,7 @@ a:hover {
 }
 #choose-location-page .btn-gonext img{
   width: 24px; height: 24px;
-  margin: 16px 16px 0 0;
+  margin: 16px 0 0 0;
 }
 
 /*DESCRIBE ANIMAL PAGE*/
@@ -1348,12 +1428,31 @@ a:hover {
   display:none;
 }
 
-
-
 .filter-set {
-  overflow:auto;
+  display: flex;
+  flex-wrap: none;
+  overflow-x: scroll;
+  padding: 0 16px;
 }
 .filter {
   font-weight:bold;
-  padding:0 0.5em;
+  padding: 1em;
+  list-style: none;
+  border: 1px solid var(--color-main-light);
+  color: var(--color-main-light);
+  margin-right: 8px;
+  white-space: nowrap;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#user-upload-page .btn-goback{
+  display: inline-block;
+}
+#user-upload-page .btn-goback img{
+  width: 24px; height: 24px;
+  margin: 16px 0 0 0;
 }

@@ -12,17 +12,16 @@ const makeAnimalList = templater(o=>`
 
 
 const makeUserProfile = o => `
-<div class="user-profile-image">
-   <img src="${o.img}" alt="">
-
-   <div class="floater bottom right">
-      <a href="#user-upload-page" class="icon"><img src="img/changeimg.png" alt=""></a>
+   <div class="user-profile-image">
+      <img src="${o.img}" alt="">
    </div>
-</div>
-<div class="user-profile-description">
-   <div class="user-profile-name">${o.name}</div>
-   <div class="user-profile-email">${o.email}</div>
-</div>
+   <div class="user-profile-description">
+      <div class="user-profile-name">${o.name}</div>
+      <div class="user-profile-email">${o.email}</div>
+   </div>
+   <div class="change-photo-content">
+      <a href="#user-upload-page" class="change-photo">Change Profile Photo</a>
+   </div>
 `;
 
 // const makeAnimalInfo = o => `
@@ -52,8 +51,16 @@ const makeAnimalInfo = o => `
          ${o.breed}
       </div>
    </div>
-   <button class="form-button animal-delete" data-id="${o.id}">Delete</button>
+   <div class="animal-info-row">
+      <div class="animal-info-title">Description</div>
+      <div class="animal-info-content">
+         ${o.description}
+      </div>
+   </div>
+   <button class="form-button animal-delete btn-save" data-id="${o.id}">Delete</button>
 `;
+
+/** */
 
 
 const makeAnimalPopup = o => `
@@ -202,7 +209,7 @@ const makeAnimalListSet = (animals,missing_text="") => {
    $("#list-page .animallist").html(animal_template);
 }
 
-const capitalize = s => s[0].toUpperCase()+s.substr(1);
+const capitalize = s => s[0] ? s[0].toUpperCase()+s.substr(1) : '';
 
 const filterList = (animals,type) => {
    let a = [...(new Set(animals.map(o=>o[type])))];
@@ -212,9 +219,7 @@ const filterList = (animals,type) => {
 const makeFilterList = (animals) => {
    return `
    <li class="filter" data-field="type" data-value="">All</li>
-   |
    ${filterList(animals,'type')}
-   |
    ${filterList(animals,'breed')}
    `
 }

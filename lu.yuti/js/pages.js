@@ -36,20 +36,11 @@ const RecentPage = async () => {
       })
    })
 }
-
-
-
-
-
-
-
 const ListPage = async () => {
    let animals = await query({
       type:'animals_by_user_id',
       params:[sessionStorage.userId]
    });
-
-   console.log(animals)
 
    $(".filter-set").html(makeFilterList(animals.result))
 
@@ -58,11 +49,6 @@ const ListPage = async () => {
       "No animals yet. Try adding some."
    );
 }
-
-
-
-
-
 
 
 const UserProfilePage = async () => {
@@ -81,8 +67,12 @@ const UserEditPage = async () => {
       params:[sessionStorage.userId]
    });
 
+
+   $("#user-edit-page .profile")
+      .html(makeUserProfile(user.result[0]));
+      
    $("#user-edit-form")
-         .html(makeUserProfileUpdateForm(user.result[0]));
+      .html(makeUserProfileUpdateForm(user.result[0]));
 }
 
 const UserPasswordPage = async () => {

@@ -169,7 +169,7 @@
 
  
 	<section data-role="page" id="list-page">
-		<header data-role="header">
+		<header data-role="header" class="main_header">
 			<h1>Fox list</h1>
 			<ul>
 				<li class="flex-stretch" style="padding-left:0.5em">
@@ -185,11 +185,11 @@
 		<div data-role="main">
 			<div class="overscroll">
 				
-				<form data-ajax="false" id="list-search" class="hotdog">
+				<form data-ajax="false" id="list-search" class="hotdog hovering">
 					<input type="search" id="list-search-value" data-role="none" placeholder="Search">
 				 </form>
 
-				 <div data-role="header">
+				 <div data-role="header-filter">
 					<ul class="filter-set"></ul>
 				 </div>
 
@@ -229,7 +229,7 @@
  
  
  
-	<!-- USER DATA SECTION -->
+	<!-- USER DATA SECTION USER PROFILE-->
  
 	<section data-role="page" id="user-profile-page">
 		<div data-role="main">
@@ -244,9 +244,9 @@
 				</div>
 				<div class="profile"></div>
 
-				<div class="floater bottom right">
-					<a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/changeimg" alt=""></a>
-				 </div>
+				<!-- <div class="floater bottom right">
+					<a href="#" class="icon" data-activate="#user-settings-modal"><img src="img/changeimg.png" alt=""></a>
+				 </div> -->
 
 				<div class="my-animal-title">My Favorite Fox</div>
 				<div class="my-animal">
@@ -267,12 +267,17 @@
 		<div data-role="main">
 			<div class="overscroll">
 				<div class="page-head">
-					<a href="#" data-rel="back"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
+					<a href="#" data-rel="back">
+						<div class="btn-goback">
+							<img src="img/goback.png" alt="">
+							<!-- <a href="#user-upload-page" class="icon"><img src="img/changeimg.png" alt=""></a> -->
+						</div>
+					</a>
+					
 				</div>
-				<div class="photo"><img src="img/userimg.png" alt=""></div>   
-				<div class="change-photo-content">
-					<div class="change-photo">Change Profile Photo</div>
-				</div>
+				<div class="profile"></div>
+				<!-- <div class="photo profile"><img src="img/userimg.png" alt=""></div>    -->
+				
 				<form id="user-edit-form" data-ajax="false" style="padding:1em"></form>	
 				<!-- <div class="page-content">
 					<div class="input-block">
@@ -325,7 +330,7 @@
 		<header data-role="header">
 		   <h1>Upload photo</h1>
 		   <ul>
-			  <li><a href="#" data-rel="back">Cancel</a></li>
+			  <li><a href="#" data-rel="back"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a></li>
 			  <li class="flex-stretch"></li>
 			  <li><a href="#" class="user-upload-submit">Save</a></li>
 		   </ul>
@@ -337,7 +342,7 @@
 				 <label class="image-uploader full">
 					<input type="file" data-role="none" id="user-upload-input">
 				 </label>
-				 <label for="user-upload-input" class="floater bottom left">
+				 <label for="user-upload-input" class="floater bottom left upload_icon">
 					<img src="img/uploadimg.png" alt="" class="icon">
 				 </label>
 			  </form>
@@ -384,20 +389,23 @@
 		</div>
 	 </section>
 
+	
 
 	<!--  ANIMAL EDIT SECTION -->
- 
+
 	<section data-role="page" id="animal-edit-page">
 	   <div data-role="main">
 		<div class="overscroll">
 			<div class="animal-top">
 				<a href="#" data-rel="back"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
 				<input type="file" id="upload-photo" class="upload-input" data-role="none">
-				<img src="img/changeimg.png" class="btn-upload">
+				<a href="#animal-upload-page"><img src="img/changeimg.png" class="btn-upload"></a>
 			</div>
 			<div class="page-content">
-				<div class="btn-delete"><img src="img/delete.png" alt=""></div>
+				<!-- <div class="btn-delete"><img src="img/delete.png" alt=""></div> -->
 				<form id="animal-edit-form" data-ajax="false" style="padding:1em"></form>
+				<!-- <div id="animal-edit-form" data-ajax="false" style="padding:1em"></div> -->
+
 				<!-- <div class="input-block">
 					<label for="">Name</label>
 					<input type="text" placeholder='Name'>
@@ -427,21 +435,18 @@
 			 <div class="animal-top">
 				 <a href="#" data-rel="back"><div class="btn-goback"><img src="img/goback.png" alt=""></div></a>
 				 <input type="file" id="upload-photo" class="upload-input" data-role="none">
-				 <img src="img/upload.svg" class="btn-upload">
+				 <img src="img/changeimg.png" class="btn-upload">
 			 </div>
-			 <div class="page-content">
-				 <div class="btn-delete"><img src="img/delete.png" alt=""></div>
-				 <form id="animal-add-form" data-ajax="false" style="padding:1em">
-					<input type='hidden' id='animal-add-location'>
-               			<div class="form-elements"></div>
-				 <a href="#" class= "animal-add-submit"><div class="btn-save">Save</div></a>
-				 </div>
+			<div class="page-content">
+				<div class="btn-delete"><img src="img/delete.png" alt=""></div>
+				<form id="animal-add-form" data-ajax="false" style="padding:1em">
+				<input type='hidden' id='animal-add-location'>
+					<div class="form-elements"></div>
+				<a href="#" class= "animal-add-submit"><div class="btn-save">Save</div></a>
 				</div>
+			</div>
 		</div>
 	 </section>
-
- 
-
 	<!-- CHOOSE LOCATION PAGES -->
 	<section data-role="page" id="choose-animal-page">
 		<header data-role="header">
@@ -454,17 +459,17 @@
 		</header>
 		<div data-role="main" class="display-flex flex-vertical">
 		   <div class="overscroll">
-			  <form style="padding:1em">
-				 <div class="choose-animal-button btn-create-new-animal">
-					 <a href="#animal-add-page" class="form-button">Create new animal</a>
-				</div>
-				 <p style="text-align:center">Or Choose One Below</p>
-				 <div class="choose-animal-button btn-choose-new-animal">
-					<div class='form-select'>
-					   <select id="location-choose-animal" data-role="none"></select>
+				<form style="padding:1em">
+					<div class="choose-animal-button btn-create-new-animal">
+						<a href="#animal-add-page" class="form-button">Create new animal</a>
 					</div>
-				 </div>
-			  </form>
+					<p style="text-align:center">Or choose one below</p>
+					<div class="choose-animal-button btn-choose-new-animal">
+						<div class='form-select'>
+						<select id="location-choose-animal" data-role="none"></select>
+						</div>
+					</div>
+				</form>
 		   </div>
 		</div>
 	 </section>

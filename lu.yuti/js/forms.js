@@ -135,7 +135,6 @@ const checkLocationAddForm = () => {
       if(d.error) {
          throw d.error;
       }
-      // $.mobile.navigate("#recent-page")
       window.history.go(+$("#location-redirect").val());
    })
 }
