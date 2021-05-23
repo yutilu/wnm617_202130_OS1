@@ -220,7 +220,7 @@ const filterList = (animals,type) => {
 const makeFilterList = (animals) => {
    return `
    <li class="filter" data-field="type" data-value="">All</li>
-   ${filterList(animals,'type')}
+   
    ${filterList(animals,'breed')}
    `
 }
