@@ -1,10 +1,9 @@
 
-const RecentPage = async () => {
+const RecentPage = async (searchResult='') => {
    let locations = await query({
       type:'recent_locations',
       params:[sessionStorage.userId]
    });
-   console.log(locations)
 
    let valid_animals = locations.result.reduce((r,o)=>{
       o.icon = o.img;
@@ -13,7 +12,11 @@ const RecentPage = async () => {
    },[]);
 
    let map_el = await makeMap("#recent-page .map");
-   makeMarkers(map_el,valid_animals);
+   valid_animals = valid_animals.filter(a => {
+      return a.name.toLowerCase().indexOf(searchResult.toLowerCase()) >= 0
+   })
+
+   makeMarkers(map_el, valid_animals);
 
    map_el.data("markers").forEach((o,i)=>{
       o.addListener("click",function(){

@@ -200,6 +200,11 @@ ${FormControlInput({
    value:''
 })}
 `
+//=========================
+const recentAnimalResult = (animals, missing_text="") =>{
+   
+}
+//=========================
 
 
 const makeAnimalListSet = (animals,missing_text="") => {

@@ -1339,12 +1339,6 @@ a:hover {
 }
 
 /*CHOOSE ANIMALS PAGE*/
-#choose-animal-page .overscroll{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 #choose-animal-page .choose-animal-page-inner{
   width: 100%;
 }
@@ -1367,8 +1361,6 @@ a:hover {
 #choose-animal-page .choose-animal-button{
   width: calc(100% - 32px);
   margin: 24px auto;
-  border-radius: 10px;
-  overflow: hidden;
 }
 #choose-animal-page .btn-create-new-animal a{
   background-color: var(--color-main-light);
