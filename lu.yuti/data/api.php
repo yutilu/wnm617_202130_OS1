@@ -237,6 +237,16 @@ function makeStatement($data) {
             ",$p,false);
          return ["result"=>"success"];
 
+      case "update_favorite-animal_image":
+         $r = makeQuery($c,"UPDATE
+            `track_202130_animals`
+            SET
+            `img` = ?
+            WHERE `id` = ?
+            ",$p,false);
+         return ["result"=>"success"];
+
+
       case "update_location":
          $r = makeQuery($c,"UPDATE
             `track_202130_locations`

@@ -79,6 +79,26 @@ $(()=>{
       })
    })
 
+   .on("change","#favorite-animal-update-image-input",function(e){
+      checkUpload(this.files[0])
+      .then(d=>{
+         console.log(d)
+         if(d.error) throw "Uploading failed: "+d.error;
+
+         let image_location = 'uploads/'+d.result;
+         query({
+            type:'update_favorite-animal_image',
+            params:[image_location,sessionStorage.animalId]
+         }).then(d=>{
+            if(d.error) {
+               throw d.error;
+            }
+            $("#favorite-animal-profile-page .animal-top")
+               .css({"background-image":`url(${image_location})`})
+         })
+      })
+   })
+
 
 
 
